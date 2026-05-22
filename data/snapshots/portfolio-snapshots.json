@@ -1,0 +1,3946 @@
+{
+  "generatedAt": "2026-05-22T23:24:42.883096+00:00",
+  "sourceMode": "deterministic-sample",
+  "apps": {
+    "regression-diagnostics-lab": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 42.03,
+          "modeled": 43.21,
+          "residual": -1.18
+        },
+        {
+          "period": "2026-02",
+          "observed": 47.09,
+          "modeled": 44.75,
+          "residual": 2.33
+        },
+        {
+          "period": "2026-03",
+          "observed": 48.3,
+          "modeled": 46.04,
+          "residual": 2.25
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.18,
+          "modeled": 46.99,
+          "residual": 0.19
+        },
+        {
+          "period": "2026-05",
+          "observed": 48.82,
+          "modeled": 47.54,
+          "residual": 1.27
+        },
+        {
+          "period": "2026-06",
+          "observed": 48.65,
+          "modeled": 47.69,
+          "residual": 0.96
+        },
+        {
+          "period": "2026-07",
+          "observed": 49.07,
+          "modeled": 47.47,
+          "residual": 1.61
+        },
+        {
+          "period": "2026-08",
+          "observed": 48.81,
+          "modeled": 46.95,
+          "residual": 1.86
+        },
+        {
+          "period": "2026-09",
+          "observed": 44.64,
+          "modeled": 46.24,
+          "residual": -1.6
+        },
+        {
+          "period": "2026-10",
+          "observed": 43.16,
+          "modeled": 45.48,
+          "residual": -2.32
+        },
+        {
+          "period": "2026-11",
+          "observed": 45.62,
+          "modeled": 44.8,
+          "residual": 0.83
+        },
+        {
+          "period": "2026-12",
+          "observed": 43.04,
+          "modeled": 44.31,
+          "residual": -1.28
+        },
+        {
+          "period": "2026-01",
+          "observed": 44.09,
+          "modeled": 44.14,
+          "residual": -0.05
+        },
+        {
+          "period": "2026-02",
+          "observed": 40.86,
+          "modeled": 44.35,
+          "residual": -3.49
+        },
+        {
+          "period": "2026-03",
+          "observed": 43.48,
+          "modeled": 44.96,
+          "residual": -1.49
+        },
+        {
+          "period": "2026-04",
+          "observed": 45.88,
+          "modeled": 45.97,
+          "residual": -0.08
+        },
+        {
+          "period": "2026-05",
+          "observed": 45.36,
+          "modeled": 47.3,
+          "residual": -1.95
+        },
+        {
+          "period": "2026-06",
+          "observed": 50.47,
+          "modeled": 48.87,
+          "residual": 1.6
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.39,
+          "modeled": 50.56,
+          "residual": 1.83
+        },
+        {
+          "period": "2026-08",
+          "observed": 50.64,
+          "modeled": 52.22,
+          "residual": -1.58
+        },
+        {
+          "period": "2026-09",
+          "observed": 52.5,
+          "modeled": 53.73,
+          "residual": -1.23
+        },
+        {
+          "period": "2026-10",
+          "observed": 56.28,
+          "modeled": 54.97,
+          "residual": 1.31
+        },
+        {
+          "period": "2026-11",
+          "observed": 59.07,
+          "modeled": 55.87,
+          "residual": 3.21
+        },
+        {
+          "period": "2026-12",
+          "observed": 57.12,
+          "modeled": 56.36,
+          "residual": 0.76
+        },
+        {
+          "period": "2026-01",
+          "observed": 56.35,
+          "modeled": 56.44,
+          "residual": -0.09
+        },
+        {
+          "period": "2026-02",
+          "observed": 56.72,
+          "modeled": 56.17,
+          "residual": 0.55
+        },
+        {
+          "period": "2026-03",
+          "observed": 54.08,
+          "modeled": 55.61,
+          "residual": -1.54
+        },
+        {
+          "period": "2026-04",
+          "observed": 53.79,
+          "modeled": 54.89,
+          "residual": -1.11
+        },
+        {
+          "period": "2026-05",
+          "observed": 53.55,
+          "modeled": 54.13,
+          "residual": -0.58
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.75,
+          "modeled": 53.47,
+          "residual": -0.73
+        }
+      ],
+      "classification": {
+        "tp": 161,
+        "fp": 27,
+        "tn": 200,
+        "fn": 26,
+        "accuracy": 0.87,
+        "precision": 0.86,
+        "recall": 0.86
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "housing-price-modeling-dashboard": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 47.72,
+          "modeled": 44.75,
+          "residual": 2.97
+        },
+        {
+          "period": "2026-02",
+          "observed": 49.5,
+          "modeled": 46.22,
+          "residual": 3.28
+        },
+        {
+          "period": "2026-03",
+          "observed": 46.84,
+          "modeled": 47.28,
+          "residual": -0.43
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.59,
+          "modeled": 47.86,
+          "residual": -0.27
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.85,
+          "modeled": 47.96,
+          "residual": 2.89
+        },
+        {
+          "period": "2026-06",
+          "observed": 49.78,
+          "modeled": 47.61,
+          "residual": 2.17
+        },
+        {
+          "period": "2026-07",
+          "observed": 48.37,
+          "modeled": 46.91,
+          "residual": 1.46
+        },
+        {
+          "period": "2026-08",
+          "observed": 45.36,
+          "modeled": 45.99,
+          "residual": -0.62
+        },
+        {
+          "period": "2026-09",
+          "observed": 45.16,
+          "modeled": 44.99,
+          "residual": 0.17
+        },
+        {
+          "period": "2026-10",
+          "observed": 43.78,
+          "modeled": 44.09,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-11",
+          "observed": 42.62,
+          "modeled": 43.44,
+          "residual": -0.82
+        },
+        {
+          "period": "2026-12",
+          "observed": 40.2,
+          "modeled": 43.16,
+          "residual": -2.95
+        },
+        {
+          "period": "2026-01",
+          "observed": 41.46,
+          "modeled": 43.32,
+          "residual": -1.86
+        },
+        {
+          "period": "2026-02",
+          "observed": 42.02,
+          "modeled": 43.98,
+          "residual": -1.96
+        },
+        {
+          "period": "2026-03",
+          "observed": 44.82,
+          "modeled": 45.11,
+          "residual": -0.29
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.91,
+          "modeled": 46.63,
+          "residual": 1.28
+        },
+        {
+          "period": "2026-05",
+          "observed": 49.98,
+          "modeled": 48.44,
+          "residual": 1.54
+        },
+        {
+          "period": "2026-06",
+          "observed": 50.66,
+          "modeled": 50.38,
+          "residual": 0.27
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.64,
+          "modeled": 52.3,
+          "residual": 0.34
+        },
+        {
+          "period": "2026-08",
+          "observed": 54.04,
+          "modeled": 54.04,
+          "residual": 0.01
+        },
+        {
+          "period": "2026-09",
+          "observed": 54.76,
+          "modeled": 55.45,
+          "residual": -0.69
+        },
+        {
+          "period": "2026-10",
+          "observed": 55.9,
+          "modeled": 56.44,
+          "residual": -0.55
+        },
+        {
+          "period": "2026-11",
+          "observed": 58.34,
+          "modeled": 56.95,
+          "residual": 1.39
+        },
+        {
+          "period": "2026-12",
+          "observed": 57.57,
+          "modeled": 56.98,
+          "residual": 0.59
+        },
+        {
+          "period": "2026-01",
+          "observed": 57.12,
+          "modeled": 56.57,
+          "residual": 0.54
+        },
+        {
+          "period": "2026-02",
+          "observed": 58.2,
+          "modeled": 55.83,
+          "residual": 2.37
+        },
+        {
+          "period": "2026-03",
+          "observed": 55.14,
+          "modeled": 54.89,
+          "residual": 0.26
+        },
+        {
+          "period": "2026-04",
+          "observed": 53.79,
+          "modeled": 53.9,
+          "residual": -0.11
+        },
+        {
+          "period": "2026-05",
+          "observed": 51.01,
+          "modeled": 53.02,
+          "residual": -2.01
+        },
+        {
+          "period": "2026-06",
+          "observed": 49.09,
+          "modeled": 52.42,
+          "residual": -3.33
+        }
+      ],
+      "classification": {
+        "tp": 149,
+        "fp": 41,
+        "tn": 198,
+        "fn": 36,
+        "accuracy": 0.82,
+        "precision": 0.78,
+        "recall": 0.81
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "election-polling-sampling-simulator": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 46.74,
+          "modeled": 46.36,
+          "residual": 0.38
+        },
+        {
+          "period": "2026-02",
+          "observed": 49.49,
+          "modeled": 47.53,
+          "residual": 1.96
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.39,
+          "modeled": 48.15,
+          "residual": 1.24
+        },
+        {
+          "period": "2026-04",
+          "observed": 50.31,
+          "modeled": 48.2,
+          "residual": 2.11
+        },
+        {
+          "period": "2026-05",
+          "observed": 49.59,
+          "modeled": 47.73,
+          "residual": 1.87
+        },
+        {
+          "period": "2026-06",
+          "observed": 45.76,
+          "modeled": 46.84,
+          "residual": -1.08
+        },
+        {
+          "period": "2026-07",
+          "observed": 43.82,
+          "modeled": 45.7,
+          "residual": -1.89
+        },
+        {
+          "period": "2026-08",
+          "observed": 45.62,
+          "modeled": 44.48,
+          "residual": 1.14
+        },
+        {
+          "period": "2026-09",
+          "observed": 41.39,
+          "modeled": 43.36,
+          "residual": -1.97
+        },
+        {
+          "period": "2026-10",
+          "observed": 39.99,
+          "modeled": 42.53,
+          "residual": -2.55
+        },
+        {
+          "period": "2026-11",
+          "observed": 42.63,
+          "modeled": 42.14,
+          "residual": 0.49
+        },
+        {
+          "period": "2026-12",
+          "observed": 40.32,
+          "modeled": 42.27,
+          "residual": -1.95
+        },
+        {
+          "period": "2026-01",
+          "observed": 42.71,
+          "modeled": 42.97,
+          "residual": -0.26
+        },
+        {
+          "period": "2026-02",
+          "observed": 42.64,
+          "modeled": 44.22,
+          "residual": -1.58
+        },
+        {
+          "period": "2026-03",
+          "observed": 45.49,
+          "modeled": 45.93,
+          "residual": -0.44
+        },
+        {
+          "period": "2026-04",
+          "observed": 45.93,
+          "modeled": 47.98,
+          "residual": -2.05
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.86,
+          "modeled": 50.18,
+          "residual": 0.68
+        },
+        {
+          "period": "2026-06",
+          "observed": 54.65,
+          "modeled": 52.35,
+          "residual": 2.3
+        },
+        {
+          "period": "2026-07",
+          "observed": 55.61,
+          "modeled": 54.31,
+          "residual": 1.3
+        },
+        {
+          "period": "2026-08",
+          "observed": 58.54,
+          "modeled": 55.9,
+          "residual": 2.64
+        },
+        {
+          "period": "2026-09",
+          "observed": 59.53,
+          "modeled": 56.99,
+          "residual": 2.54
+        },
+        {
+          "period": "2026-10",
+          "observed": 57.4,
+          "modeled": 57.52,
+          "residual": -0.12
+        },
+        {
+          "period": "2026-11",
+          "observed": 60.24,
+          "modeled": 57.49,
+          "residual": 2.75
+        },
+        {
+          "period": "2026-12",
+          "observed": 58.6,
+          "modeled": 56.95,
+          "residual": 1.65
+        },
+        {
+          "period": "2026-01",
+          "observed": 55.89,
+          "modeled": 56.01,
+          "residual": -0.12
+        },
+        {
+          "period": "2026-02",
+          "observed": 52.95,
+          "modeled": 54.85,
+          "residual": -1.9
+        },
+        {
+          "period": "2026-03",
+          "observed": 54.8,
+          "modeled": 53.63,
+          "residual": 1.17
+        },
+        {
+          "period": "2026-04",
+          "observed": 51.44,
+          "modeled": 52.55,
+          "residual": -1.11
+        },
+        {
+          "period": "2026-05",
+          "observed": 51.3,
+          "modeled": 51.77,
+          "residual": -0.47
+        },
+        {
+          "period": "2026-06",
+          "observed": 51.4,
+          "modeled": 51.45,
+          "residual": -0.06
+        }
+      ],
+      "classification": {
+        "tp": 179,
+        "fp": 57,
+        "tn": 197,
+        "fn": 54,
+        "accuracy": 0.77,
+        "precision": 0.76,
+        "recall": 0.77
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "categorical-data-analysis-explorer": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 48.61,
+          "modeled": 47.75,
+          "residual": 0.86
+        },
+        {
+          "period": "2026-02",
+          "observed": 48.73,
+          "modeled": 48.4,
+          "residual": 0.32
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.84,
+          "modeled": 48.4,
+          "residual": 1.43
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.8,
+          "modeled": 47.81,
+          "residual": -0.01
+        },
+        {
+          "period": "2026-05",
+          "observed": 45.79,
+          "modeled": 46.75,
+          "residual": -0.96
+        },
+        {
+          "period": "2026-06",
+          "observed": 45.25,
+          "modeled": 45.39,
+          "residual": -0.14
+        },
+        {
+          "period": "2026-07",
+          "observed": 45.37,
+          "modeled": 43.93,
+          "residual": 1.44
+        },
+        {
+          "period": "2026-08",
+          "observed": 42.88,
+          "modeled": 42.6,
+          "residual": 0.28
+        },
+        {
+          "period": "2026-09",
+          "observed": 41.19,
+          "modeled": 41.6,
+          "residual": -0.41
+        },
+        {
+          "period": "2026-10",
+          "observed": 37.93,
+          "modeled": 41.09,
+          "residual": -3.16
+        },
+        {
+          "period": "2026-11",
+          "observed": 39.27,
+          "modeled": 41.19,
+          "residual": -1.92
+        },
+        {
+          "period": "2026-12",
+          "observed": 38.96,
+          "modeled": 41.93,
+          "residual": -2.98
+        },
+        {
+          "period": "2026-01",
+          "observed": 40.17,
+          "modeled": 43.31,
+          "residual": -3.13
+        },
+        {
+          "period": "2026-02",
+          "observed": 42.27,
+          "modeled": 45.21,
+          "residual": -2.94
+        },
+        {
+          "period": "2026-03",
+          "observed": 45.65,
+          "modeled": 47.49,
+          "residual": -1.84
+        },
+        {
+          "period": "2026-04",
+          "observed": 51.93,
+          "modeled": 49.95,
+          "residual": 1.99
+        },
+        {
+          "period": "2026-05",
+          "observed": 54.6,
+          "modeled": 52.37,
+          "residual": 2.23
+        },
+        {
+          "period": "2026-06",
+          "observed": 57.28,
+          "modeled": 54.56,
+          "residual": 2.72
+        },
+        {
+          "period": "2026-07",
+          "observed": 59.44,
+          "modeled": 56.32,
+          "residual": 3.13
+        },
+        {
+          "period": "2026-08",
+          "observed": 58.2,
+          "modeled": 57.51,
+          "residual": 0.69
+        },
+        {
+          "period": "2026-09",
+          "observed": 59.28,
+          "modeled": 58.06,
+          "residual": 1.22
+        },
+        {
+          "period": "2026-10",
+          "observed": 60.37,
+          "modeled": 57.96,
+          "residual": 2.4
+        },
+        {
+          "period": "2026-11",
+          "observed": 59.74,
+          "modeled": 57.29,
+          "residual": 2.45
+        },
+        {
+          "period": "2026-12",
+          "observed": 58.59,
+          "modeled": 56.17,
+          "residual": 2.42
+        },
+        {
+          "period": "2026-01",
+          "observed": 56.64,
+          "modeled": 54.78,
+          "residual": 1.86
+        },
+        {
+          "period": "2026-02",
+          "observed": 51.02,
+          "modeled": 53.33,
+          "residual": -2.32
+        },
+        {
+          "period": "2026-03",
+          "observed": 51.37,
+          "modeled": 52.04,
+          "residual": -0.67
+        },
+        {
+          "period": "2026-04",
+          "observed": 50.22,
+          "modeled": 51.1,
+          "residual": -0.88
+        },
+        {
+          "period": "2026-05",
+          "observed": 48.74,
+          "modeled": 50.68,
+          "residual": -1.94
+        },
+        {
+          "period": "2026-06",
+          "observed": 47.37,
+          "modeled": 50.87,
+          "residual": -3.5
+        }
+      ],
+      "classification": {
+        "tp": 193,
+        "fp": 20,
+        "tn": 204,
+        "fn": 81,
+        "accuracy": 0.8,
+        "precision": 0.91,
+        "recall": 0.7
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "bayesian-disease-testing-simulator": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 46.52,
+          "modeled": 44.95,
+          "residual": 1.58
+        },
+        {
+          "period": "2026-02",
+          "observed": 47.23,
+          "modeled": 45.22,
+          "residual": 2.01
+        },
+        {
+          "period": "2026-03",
+          "observed": 47.24,
+          "modeled": 45.19,
+          "residual": 2.05
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.35,
+          "modeled": 44.93,
+          "residual": 2.42
+        },
+        {
+          "period": "2026-05",
+          "observed": 45.72,
+          "modeled": 44.52,
+          "residual": 1.2
+        },
+        {
+          "period": "2026-06",
+          "observed": 45.72,
+          "modeled": 44.06,
+          "residual": 1.66
+        },
+        {
+          "period": "2026-07",
+          "observed": 41.07,
+          "modeled": 43.67,
+          "residual": -2.59
+        },
+        {
+          "period": "2026-08",
+          "observed": 42.5,
+          "modeled": 43.43,
+          "residual": -0.94
+        },
+        {
+          "period": "2026-09",
+          "observed": 44.43,
+          "modeled": 43.45,
+          "residual": 0.98
+        },
+        {
+          "period": "2026-10",
+          "observed": 43.38,
+          "modeled": 43.77,
+          "residual": -0.38
+        },
+        {
+          "period": "2026-11",
+          "observed": 45.18,
+          "modeled": 44.41,
+          "residual": 0.77
+        },
+        {
+          "period": "2026-12",
+          "observed": 42.82,
+          "modeled": 45.37,
+          "residual": -2.55
+        },
+        {
+          "period": "2026-01",
+          "observed": 45.85,
+          "modeled": 46.59,
+          "residual": -0.74
+        },
+        {
+          "period": "2026-02",
+          "observed": 46.59,
+          "modeled": 48.0,
+          "residual": -1.41
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.74,
+          "modeled": 49.5,
+          "residual": 0.24
+        },
+        {
+          "period": "2026-04",
+          "observed": 51.7,
+          "modeled": 50.98,
+          "residual": 0.71
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.89,
+          "modeled": 52.34,
+          "residual": -1.46
+        },
+        {
+          "period": "2026-06",
+          "observed": 53.15,
+          "modeled": 53.49,
+          "residual": -0.34
+        },
+        {
+          "period": "2026-07",
+          "observed": 54.41,
+          "modeled": 54.36,
+          "residual": 0.05
+        },
+        {
+          "period": "2026-08",
+          "observed": 57.76,
+          "modeled": 54.9,
+          "residual": 2.86
+        },
+        {
+          "period": "2026-09",
+          "observed": 57.22,
+          "modeled": 55.13,
+          "residual": 2.09
+        },
+        {
+          "period": "2026-10",
+          "observed": 54.28,
+          "modeled": 55.06,
+          "residual": -0.78
+        },
+        {
+          "period": "2026-11",
+          "observed": 56.51,
+          "modeled": 54.77,
+          "residual": 1.74
+        },
+        {
+          "period": "2026-12",
+          "observed": 52.85,
+          "modeled": 54.35,
+          "residual": -1.49
+        },
+        {
+          "period": "2026-01",
+          "observed": 54.16,
+          "modeled": 53.89,
+          "residual": 0.27
+        },
+        {
+          "period": "2026-02",
+          "observed": 51.31,
+          "modeled": 53.51,
+          "residual": -2.21
+        },
+        {
+          "period": "2026-03",
+          "observed": 50.3,
+          "modeled": 53.32,
+          "residual": -3.01
+        },
+        {
+          "period": "2026-04",
+          "observed": 54.02,
+          "modeled": 53.37,
+          "residual": 0.65
+        },
+        {
+          "period": "2026-05",
+          "observed": 51.42,
+          "modeled": 53.74,
+          "residual": -2.32
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.2,
+          "modeled": 54.43,
+          "residual": -2.23
+        }
+      ],
+      "classification": {
+        "tp": 177,
+        "fp": 53,
+        "tn": 259,
+        "fn": 79,
+        "accuracy": 0.77,
+        "precision": 0.77,
+        "recall": 0.69
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "time-series-forecasting-hub": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 47.84,
+          "modeled": 45.36,
+          "residual": 2.47
+        },
+        {
+          "period": "2026-02",
+          "observed": 47.57,
+          "modeled": 45.22,
+          "residual": 2.36
+        },
+        {
+          "period": "2026-03",
+          "observed": 45.3,
+          "modeled": 44.77,
+          "residual": 0.53
+        },
+        {
+          "period": "2026-04",
+          "observed": 43.28,
+          "modeled": 44.14,
+          "residual": -0.87
+        },
+        {
+          "period": "2026-05",
+          "observed": 41.01,
+          "modeled": 43.45,
+          "residual": -2.45
+        },
+        {
+          "period": "2026-06",
+          "observed": 42.91,
+          "modeled": 42.85,
+          "residual": 0.06
+        },
+        {
+          "period": "2026-07",
+          "observed": 41.33,
+          "modeled": 42.44,
+          "residual": -1.11
+        },
+        {
+          "period": "2026-08",
+          "observed": 42.28,
+          "modeled": 42.34,
+          "residual": -0.06
+        },
+        {
+          "period": "2026-09",
+          "observed": 40.77,
+          "modeled": 42.62,
+          "residual": -1.86
+        },
+        {
+          "period": "2026-10",
+          "observed": 43.25,
+          "modeled": 43.31,
+          "residual": -0.06
+        },
+        {
+          "period": "2026-11",
+          "observed": 42.33,
+          "modeled": 44.39,
+          "residual": -2.06
+        },
+        {
+          "period": "2026-12",
+          "observed": 46.38,
+          "modeled": 45.8,
+          "residual": 0.58
+        },
+        {
+          "period": "2026-01",
+          "observed": 48.09,
+          "modeled": 47.45,
+          "residual": 0.65
+        },
+        {
+          "period": "2026-02",
+          "observed": 48.89,
+          "modeled": 49.21,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-03",
+          "observed": 51.6,
+          "modeled": 50.94,
+          "residual": 0.65
+        },
+        {
+          "period": "2026-04",
+          "observed": 54.19,
+          "modeled": 52.53,
+          "residual": 1.66
+        },
+        {
+          "period": "2026-05",
+          "observed": 53.63,
+          "modeled": 53.85,
+          "residual": -0.22
+        },
+        {
+          "period": "2026-06",
+          "observed": 56.33,
+          "modeled": 54.82,
+          "residual": 1.51
+        },
+        {
+          "period": "2026-07",
+          "observed": 58.01,
+          "modeled": 55.38,
+          "residual": 2.63
+        },
+        {
+          "period": "2026-08",
+          "observed": 55.66,
+          "modeled": 55.54,
+          "residual": 0.12
+        },
+        {
+          "period": "2026-09",
+          "observed": 57.57,
+          "modeled": 55.34,
+          "residual": 2.23
+        },
+        {
+          "period": "2026-10",
+          "observed": 56.22,
+          "modeled": 54.86,
+          "residual": 1.35
+        },
+        {
+          "period": "2026-11",
+          "observed": 55.85,
+          "modeled": 54.22,
+          "residual": 1.63
+        },
+        {
+          "period": "2026-12",
+          "observed": 52.5,
+          "modeled": 53.53,
+          "residual": -1.03
+        },
+        {
+          "period": "2026-01",
+          "observed": 50.45,
+          "modeled": 52.95,
+          "residual": -2.5
+        },
+        {
+          "period": "2026-02",
+          "observed": 52.88,
+          "modeled": 52.58,
+          "residual": 0.3
+        },
+        {
+          "period": "2026-03",
+          "observed": 52.65,
+          "modeled": 52.54,
+          "residual": 0.11
+        },
+        {
+          "period": "2026-04",
+          "observed": 51.34,
+          "modeled": 52.88,
+          "residual": -1.54
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.62,
+          "modeled": 53.63,
+          "residual": -3.01
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.41,
+          "modeled": 54.76,
+          "residual": -2.35
+        }
+      ],
+      "classification": {
+        "tp": 180,
+        "fp": 35,
+        "tn": 234,
+        "fn": 64,
+        "accuracy": 0.81,
+        "precision": 0.84,
+        "recall": 0.74
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "public-health-risk-dashboard": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 45.56,
+          "modeled": 45.21,
+          "residual": 0.35
+        },
+        {
+          "period": "2026-02",
+          "observed": 43.76,
+          "modeled": 44.59,
+          "residual": -0.82
+        },
+        {
+          "period": "2026-03",
+          "observed": 44.62,
+          "modeled": 43.74,
+          "residual": 0.88
+        },
+        {
+          "period": "2026-04",
+          "observed": 40.64,
+          "modeled": 42.82,
+          "residual": -2.18
+        },
+        {
+          "period": "2026-05",
+          "observed": 41.37,
+          "modeled": 41.99,
+          "residual": -0.62
+        },
+        {
+          "period": "2026-06",
+          "observed": 39.64,
+          "modeled": 41.41,
+          "residual": -1.77
+        },
+        {
+          "period": "2026-07",
+          "observed": 37.81,
+          "modeled": 41.21,
+          "residual": -3.39
+        },
+        {
+          "period": "2026-08",
+          "observed": 39.92,
+          "modeled": 41.45,
+          "residual": -1.53
+        },
+        {
+          "period": "2026-09",
+          "observed": 38.65,
+          "modeled": 42.18,
+          "residual": -3.53
+        },
+        {
+          "period": "2026-10",
+          "observed": 41.82,
+          "modeled": 43.38,
+          "residual": -1.56
+        },
+        {
+          "period": "2026-11",
+          "observed": 42.19,
+          "modeled": 44.98,
+          "residual": -2.79
+        },
+        {
+          "period": "2026-12",
+          "observed": 44.63,
+          "modeled": 46.86,
+          "residual": -2.24
+        },
+        {
+          "period": "2026-01",
+          "observed": 48.63,
+          "modeled": 48.88,
+          "residual": -0.25
+        },
+        {
+          "period": "2026-02",
+          "observed": 52.9,
+          "modeled": 50.88,
+          "residual": 2.02
+        },
+        {
+          "period": "2026-03",
+          "observed": 52.06,
+          "modeled": 52.69,
+          "residual": -0.63
+        },
+        {
+          "period": "2026-04",
+          "observed": 54.31,
+          "modeled": 54.18,
+          "residual": 0.14
+        },
+        {
+          "period": "2026-05",
+          "observed": 57.34,
+          "modeled": 55.24,
+          "residual": 2.09
+        },
+        {
+          "period": "2026-06",
+          "observed": 59.34,
+          "modeled": 55.83,
+          "residual": 3.51
+        },
+        {
+          "period": "2026-07",
+          "observed": 57.65,
+          "modeled": 55.93,
+          "residual": 1.72
+        },
+        {
+          "period": "2026-08",
+          "observed": 56.22,
+          "modeled": 55.6,
+          "residual": 0.62
+        },
+        {
+          "period": "2026-09",
+          "observed": 57.67,
+          "modeled": 54.93,
+          "residual": 2.74
+        },
+        {
+          "period": "2026-10",
+          "observed": 52.21,
+          "modeled": 54.06,
+          "residual": -1.85
+        },
+        {
+          "period": "2026-11",
+          "observed": 54.35,
+          "modeled": 53.15,
+          "residual": 1.2
+        },
+        {
+          "period": "2026-12",
+          "observed": 50.58,
+          "modeled": 52.35,
+          "residual": -1.77
+        },
+        {
+          "period": "2026-01",
+          "observed": 49.02,
+          "modeled": 51.82,
+          "residual": -2.8
+        },
+        {
+          "period": "2026-02",
+          "observed": 48.51,
+          "modeled": 51.67,
+          "residual": -3.16
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.59,
+          "modeled": 51.99,
+          "residual": -2.4
+        },
+        {
+          "period": "2026-04",
+          "observed": 52.71,
+          "modeled": 52.8,
+          "residual": -0.08
+        },
+        {
+          "period": "2026-05",
+          "observed": 51.44,
+          "modeled": 54.06,
+          "residual": -2.63
+        },
+        {
+          "period": "2026-06",
+          "observed": 55.23,
+          "modeled": 55.71,
+          "residual": -0.48
+        }
+      ],
+      "classification": {
+        "tp": 153,
+        "fp": 36,
+        "tn": 237,
+        "fn": 43,
+        "accuracy": 0.83,
+        "precision": 0.81,
+        "recall": 0.78
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "machine-learning-model-arena": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 44.0,
+          "modeled": 44.37,
+          "residual": -0.37
+        },
+        {
+          "period": "2026-02",
+          "observed": 45.59,
+          "modeled": 43.3,
+          "residual": 2.29
+        },
+        {
+          "period": "2026-03",
+          "observed": 40.16,
+          "modeled": 42.15,
+          "residual": -1.99
+        },
+        {
+          "period": "2026-04",
+          "observed": 41.1,
+          "modeled": 41.11,
+          "residual": -0.01
+        },
+        {
+          "period": "2026-05",
+          "observed": 37.16,
+          "modeled": 40.36,
+          "residual": -3.2
+        },
+        {
+          "period": "2026-06",
+          "observed": 37.24,
+          "modeled": 40.04,
+          "residual": -2.8
+        },
+        {
+          "period": "2026-07",
+          "observed": 40.62,
+          "modeled": 40.25,
+          "residual": 0.38
+        },
+        {
+          "period": "2026-08",
+          "observed": 38.0,
+          "modeled": 41.02,
+          "residual": -3.02
+        },
+        {
+          "period": "2026-09",
+          "observed": 41.49,
+          "modeled": 42.35,
+          "residual": -0.86
+        },
+        {
+          "period": "2026-10",
+          "observed": 42.9,
+          "modeled": 44.13,
+          "residual": -1.23
+        },
+        {
+          "period": "2026-11",
+          "observed": 45.54,
+          "modeled": 46.25,
+          "residual": -0.71
+        },
+        {
+          "period": "2026-12",
+          "observed": 48.6,
+          "modeled": 48.53,
+          "residual": 0.07
+        },
+        {
+          "period": "2026-01",
+          "observed": 50.1,
+          "modeled": 50.78,
+          "residual": -0.67
+        },
+        {
+          "period": "2026-02",
+          "observed": 55.46,
+          "modeled": 52.81,
+          "residual": 2.65
+        },
+        {
+          "period": "2026-03",
+          "observed": 54.25,
+          "modeled": 54.47,
+          "residual": -0.23
+        },
+        {
+          "period": "2026-04",
+          "observed": 56.26,
+          "modeled": 55.64,
+          "residual": 0.62
+        },
+        {
+          "period": "2026-05",
+          "observed": 55.93,
+          "modeled": 56.24,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-06",
+          "observed": 56.87,
+          "modeled": 56.29,
+          "residual": 0.59
+        },
+        {
+          "period": "2026-07",
+          "observed": 56.67,
+          "modeled": 55.82,
+          "residual": 0.85
+        },
+        {
+          "period": "2026-08",
+          "observed": 57.48,
+          "modeled": 54.96,
+          "residual": 2.52
+        },
+        {
+          "period": "2026-09",
+          "observed": 53.51,
+          "modeled": 53.87,
+          "residual": -0.37
+        },
+        {
+          "period": "2026-10",
+          "observed": 50.59,
+          "modeled": 52.73,
+          "residual": -2.14
+        },
+        {
+          "period": "2026-11",
+          "observed": 49.67,
+          "modeled": 51.72,
+          "residual": -2.05
+        },
+        {
+          "period": "2026-12",
+          "observed": 51.75,
+          "modeled": 51.02,
+          "residual": 0.73
+        },
+        {
+          "period": "2026-01",
+          "observed": 47.13,
+          "modeled": 50.78,
+          "residual": -3.64
+        },
+        {
+          "period": "2026-02",
+          "observed": 49.78,
+          "modeled": 51.07,
+          "residual": -1.29
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.68,
+          "modeled": 51.93,
+          "residual": -2.26
+        },
+        {
+          "period": "2026-04",
+          "observed": 52.62,
+          "modeled": 53.33,
+          "residual": -0.72
+        },
+        {
+          "period": "2026-05",
+          "observed": 53.49,
+          "modeled": 55.18,
+          "residual": -1.69
+        },
+        {
+          "period": "2026-06",
+          "observed": 57.76,
+          "modeled": 57.33,
+          "residual": 0.42
+        }
+      ],
+      "classification": {
+        "tp": 133,
+        "fp": 57,
+        "tn": 239,
+        "fn": 51,
+        "accuracy": 0.78,
+        "precision": 0.7,
+        "recall": 0.72
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "deep-learning-image-classifier-demo": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 42.97,
+          "modeled": 42.84,
+          "residual": 0.13
+        },
+        {
+          "period": "2026-02",
+          "observed": 40.5,
+          "modeled": 41.46,
+          "residual": -0.95
+        },
+        {
+          "period": "2026-03",
+          "observed": 37.57,
+          "modeled": 40.2,
+          "residual": -2.63
+        },
+        {
+          "period": "2026-04",
+          "observed": 39.31,
+          "modeled": 39.27,
+          "residual": 0.04
+        },
+        {
+          "period": "2026-05",
+          "observed": 34.74,
+          "modeled": 38.84,
+          "residual": -4.1
+        },
+        {
+          "period": "2026-06",
+          "observed": 36.95,
+          "modeled": 39.01,
+          "residual": -2.07
+        },
+        {
+          "period": "2026-07",
+          "observed": 39.59,
+          "modeled": 39.83,
+          "residual": -0.24
+        },
+        {
+          "period": "2026-08",
+          "observed": 37.74,
+          "modeled": 41.28,
+          "residual": -3.54
+        },
+        {
+          "period": "2026-09",
+          "observed": 42.29,
+          "modeled": 43.26,
+          "residual": -0.96
+        },
+        {
+          "period": "2026-10",
+          "observed": 45.54,
+          "modeled": 45.61,
+          "residual": -0.07
+        },
+        {
+          "period": "2026-11",
+          "observed": 46.23,
+          "modeled": 48.15,
+          "residual": -1.92
+        },
+        {
+          "period": "2026-12",
+          "observed": 50.9,
+          "modeled": 50.65,
+          "residual": 0.25
+        },
+        {
+          "period": "2026-01",
+          "observed": 55.17,
+          "modeled": 52.91,
+          "residual": 2.26
+        },
+        {
+          "period": "2026-02",
+          "observed": 56.33,
+          "modeled": 54.74,
+          "residual": 1.59
+        },
+        {
+          "period": "2026-03",
+          "observed": 59.04,
+          "modeled": 56.01,
+          "residual": 3.03
+        },
+        {
+          "period": "2026-04",
+          "observed": 57.18,
+          "modeled": 56.63,
+          "residual": 0.55
+        },
+        {
+          "period": "2026-05",
+          "observed": 57.31,
+          "modeled": 56.61,
+          "residual": 0.69
+        },
+        {
+          "period": "2026-06",
+          "observed": 55.73,
+          "modeled": 56.02,
+          "residual": -0.28
+        },
+        {
+          "period": "2026-07",
+          "observed": 55.85,
+          "modeled": 54.97,
+          "residual": 0.88
+        },
+        {
+          "period": "2026-08",
+          "observed": 55.71,
+          "modeled": 53.66,
+          "residual": 2.05
+        },
+        {
+          "period": "2026-09",
+          "observed": 52.18,
+          "modeled": 52.28,
+          "residual": -0.1
+        },
+        {
+          "period": "2026-10",
+          "observed": 51.14,
+          "modeled": 51.06,
+          "residual": 0.07
+        },
+        {
+          "period": "2026-11",
+          "observed": 48.05,
+          "modeled": 50.2,
+          "residual": -2.15
+        },
+        {
+          "period": "2026-12",
+          "observed": 48.97,
+          "modeled": 49.85,
+          "residual": -0.89
+        },
+        {
+          "period": "2026-01",
+          "observed": 46.29,
+          "modeled": 50.12,
+          "residual": -3.83
+        },
+        {
+          "period": "2026-02",
+          "observed": 48.16,
+          "modeled": 51.04,
+          "residual": -2.88
+        },
+        {
+          "period": "2026-03",
+          "observed": 51.71,
+          "modeled": 52.57,
+          "residual": -0.86
+        },
+        {
+          "period": "2026-04",
+          "observed": 54.5,
+          "modeled": 54.62,
+          "residual": -0.12
+        },
+        {
+          "period": "2026-05",
+          "observed": 56.19,
+          "modeled": 57.01,
+          "residual": -0.82
+        },
+        {
+          "period": "2026-06",
+          "observed": 57.95,
+          "modeled": 59.56,
+          "residual": -1.61
+        }
+      ],
+      "classification": {
+        "tp": 146,
+        "fp": 18,
+        "tn": 216,
+        "fn": 24,
+        "accuracy": 0.9,
+        "precision": 0.89,
+        "recall": 0.86
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "monte-carlo-simulation-studio": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 41.55,
+          "modeled": 41.44,
+          "residual": 0.12
+        },
+        {
+          "period": "2026-02",
+          "observed": 40.28,
+          "modeled": 41.12,
+          "residual": -0.83
+        },
+        {
+          "period": "2026-03",
+          "observed": 40.52,
+          "modeled": 40.96,
+          "residual": -0.44
+        },
+        {
+          "period": "2026-04",
+          "observed": 38.79,
+          "modeled": 41.05,
+          "residual": -2.26
+        },
+        {
+          "period": "2026-05",
+          "observed": 41.78,
+          "modeled": 41.44,
+          "residual": 0.34
+        },
+        {
+          "period": "2026-06",
+          "observed": 42.59,
+          "modeled": 42.16,
+          "residual": 0.43
+        },
+        {
+          "period": "2026-07",
+          "observed": 43.02,
+          "modeled": 43.19,
+          "residual": -0.17
+        },
+        {
+          "period": "2026-08",
+          "observed": 42.39,
+          "modeled": 44.49,
+          "residual": -2.1
+        },
+        {
+          "period": "2026-09",
+          "observed": 45.77,
+          "modeled": 45.97,
+          "residual": -0.2
+        },
+        {
+          "period": "2026-10",
+          "observed": 46.84,
+          "modeled": 47.55,
+          "residual": -0.71
+        },
+        {
+          "period": "2026-11",
+          "observed": 48.4,
+          "modeled": 49.11,
+          "residual": -0.71
+        },
+        {
+          "period": "2026-12",
+          "observed": 53.22,
+          "modeled": 50.54,
+          "residual": 2.68
+        },
+        {
+          "period": "2026-01",
+          "observed": 54.85,
+          "modeled": 51.77,
+          "residual": 3.09
+        },
+        {
+          "period": "2026-02",
+          "observed": 51.73,
+          "modeled": 52.71,
+          "residual": -0.98
+        },
+        {
+          "period": "2026-03",
+          "observed": 55.94,
+          "modeled": 53.33,
+          "residual": 2.61
+        },
+        {
+          "period": "2026-04",
+          "observed": 55.0,
+          "modeled": 53.63,
+          "residual": 1.38
+        },
+        {
+          "period": "2026-05",
+          "observed": 53.83,
+          "modeled": 53.64,
+          "residual": 0.19
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.9,
+          "modeled": 53.42,
+          "residual": -0.52
+        },
+        {
+          "period": "2026-07",
+          "observed": 53.94,
+          "modeled": 53.07,
+          "residual": 0.86
+        },
+        {
+          "period": "2026-08",
+          "observed": 52.25,
+          "modeled": 52.69,
+          "residual": -0.44
+        },
+        {
+          "period": "2026-09",
+          "observed": 52.64,
+          "modeled": 52.39,
+          "residual": 0.25
+        },
+        {
+          "period": "2026-10",
+          "observed": 52.16,
+          "modeled": 52.27,
+          "residual": -0.11
+        },
+        {
+          "period": "2026-11",
+          "observed": 49.8,
+          "modeled": 52.4,
+          "residual": -2.6
+        },
+        {
+          "period": "2026-12",
+          "observed": 52.98,
+          "modeled": 52.84,
+          "residual": 0.14
+        },
+        {
+          "period": "2026-01",
+          "observed": 54.75,
+          "modeled": 53.61,
+          "residual": 1.14
+        },
+        {
+          "period": "2026-02",
+          "observed": 55.93,
+          "modeled": 54.68,
+          "residual": 1.25
+        },
+        {
+          "period": "2026-03",
+          "observed": 55.95,
+          "modeled": 56.01,
+          "residual": -0.06
+        },
+        {
+          "period": "2026-04",
+          "observed": 55.27,
+          "modeled": 57.52,
+          "residual": -2.25
+        },
+        {
+          "period": "2026-05",
+          "observed": 57.02,
+          "modeled": 59.1,
+          "residual": -2.08
+        },
+        {
+          "period": "2026-06",
+          "observed": 59.47,
+          "modeled": 60.64,
+          "residual": -1.17
+        }
+      ],
+      "classification": {
+        "tp": 166,
+        "fp": 48,
+        "tn": 211,
+        "fn": 56,
+        "accuracy": 0.78,
+        "precision": 0.78,
+        "recall": 0.75
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "survey-weighting-bias-dashboard": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 39.28,
+          "modeled": 40.15,
+          "residual": -0.86
+        },
+        {
+          "period": "2026-02",
+          "observed": 39.09,
+          "modeled": 39.81,
+          "residual": -0.72
+        },
+        {
+          "period": "2026-03",
+          "observed": 40.45,
+          "modeled": 39.79,
+          "residual": 0.66
+        },
+        {
+          "period": "2026-04",
+          "observed": 38.7,
+          "modeled": 40.15,
+          "residual": -1.45
+        },
+        {
+          "period": "2026-05",
+          "observed": 39.7,
+          "modeled": 40.91,
+          "residual": -1.21
+        },
+        {
+          "period": "2026-06",
+          "observed": 41.39,
+          "modeled": 42.07,
+          "residual": -0.67
+        },
+        {
+          "period": "2026-07",
+          "observed": 41.41,
+          "modeled": 43.55,
+          "residual": -2.14
+        },
+        {
+          "period": "2026-08",
+          "observed": 44.96,
+          "modeled": 45.27,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-09",
+          "observed": 47.74,
+          "modeled": 47.11,
+          "residual": 0.64
+        },
+        {
+          "period": "2026-10",
+          "observed": 50.69,
+          "modeled": 48.92,
+          "residual": 1.78
+        },
+        {
+          "period": "2026-11",
+          "observed": 49.65,
+          "modeled": 50.58,
+          "residual": -0.93
+        },
+        {
+          "period": "2026-12",
+          "observed": 52.24,
+          "modeled": 51.97,
+          "residual": 0.26
+        },
+        {
+          "period": "2026-01",
+          "observed": 52.49,
+          "modeled": 53.02,
+          "residual": -0.52
+        },
+        {
+          "period": "2026-02",
+          "observed": 56.3,
+          "modeled": 53.66,
+          "residual": 2.65
+        },
+        {
+          "period": "2026-03",
+          "observed": 55.9,
+          "modeled": 53.89,
+          "residual": 2.0
+        },
+        {
+          "period": "2026-04",
+          "observed": 52.65,
+          "modeled": 53.77,
+          "residual": -1.12
+        },
+        {
+          "period": "2026-05",
+          "observed": 56.02,
+          "modeled": 53.36,
+          "residual": 2.66
+        },
+        {
+          "period": "2026-06",
+          "observed": 54.96,
+          "modeled": 52.79,
+          "residual": 2.16
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.55,
+          "modeled": 52.18,
+          "residual": 0.37
+        },
+        {
+          "period": "2026-08",
+          "observed": 51.47,
+          "modeled": 51.67,
+          "residual": -0.2
+        },
+        {
+          "period": "2026-09",
+          "observed": 48.85,
+          "modeled": 51.38,
+          "residual": -2.53
+        },
+        {
+          "period": "2026-10",
+          "observed": 48.05,
+          "modeled": 51.41,
+          "residual": -3.36
+        },
+        {
+          "period": "2026-11",
+          "observed": 50.65,
+          "modeled": 51.83,
+          "residual": -1.18
+        },
+        {
+          "period": "2026-12",
+          "observed": 49.49,
+          "modeled": 52.65,
+          "residual": -3.16
+        },
+        {
+          "period": "2026-01",
+          "observed": 51.48,
+          "modeled": 53.86,
+          "residual": -2.38
+        },
+        {
+          "period": "2026-02",
+          "observed": 53.56,
+          "modeled": 55.39,
+          "residual": -1.83
+        },
+        {
+          "period": "2026-03",
+          "observed": 54.77,
+          "modeled": 57.14,
+          "residual": -2.37
+        },
+        {
+          "period": "2026-04",
+          "observed": 58.95,
+          "modeled": 58.98,
+          "residual": -0.03
+        },
+        {
+          "period": "2026-05",
+          "observed": 61.06,
+          "modeled": 60.77,
+          "residual": 0.28
+        },
+        {
+          "period": "2026-06",
+          "observed": 64.81,
+          "modeled": 62.4,
+          "residual": 2.41
+        }
+      ],
+      "classification": {
+        "tp": 186,
+        "fp": 44,
+        "tn": 253,
+        "fn": 58,
+        "accuracy": 0.81,
+        "precision": 0.81,
+        "recall": 0.76
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "ab-testing-decision-lab": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 37.35,
+          "modeled": 38.64,
+          "residual": -1.29
+        },
+        {
+          "period": "2026-02",
+          "observed": 37.75,
+          "modeled": 38.51,
+          "residual": -0.76
+        },
+        {
+          "period": "2026-03",
+          "observed": 38.0,
+          "modeled": 38.82,
+          "residual": -0.83
+        },
+        {
+          "period": "2026-04",
+          "observed": 36.56,
+          "modeled": 39.63,
+          "residual": -3.07
+        },
+        {
+          "period": "2026-05",
+          "observed": 37.49,
+          "modeled": 40.91,
+          "residual": -3.42
+        },
+        {
+          "period": "2026-06",
+          "observed": 41.13,
+          "modeled": 42.58,
+          "residual": -1.45
+        },
+        {
+          "period": "2026-07",
+          "observed": 43.11,
+          "modeled": 44.54,
+          "residual": -1.43
+        },
+        {
+          "period": "2026-08",
+          "observed": 48.08,
+          "modeled": 46.63,
+          "residual": 1.44
+        },
+        {
+          "period": "2026-09",
+          "observed": 50.12,
+          "modeled": 48.7,
+          "residual": 1.42
+        },
+        {
+          "period": "2026-10",
+          "observed": 52.06,
+          "modeled": 50.59,
+          "residual": 1.47
+        },
+        {
+          "period": "2026-11",
+          "observed": 53.76,
+          "modeled": 52.15,
+          "residual": 1.61
+        },
+        {
+          "period": "2026-12",
+          "observed": 55.53,
+          "modeled": 53.29,
+          "residual": 2.24
+        },
+        {
+          "period": "2026-01",
+          "observed": 53.94,
+          "modeled": 53.95,
+          "residual": -0.02
+        },
+        {
+          "period": "2026-02",
+          "observed": 55.25,
+          "modeled": 54.13,
+          "residual": 1.12
+        },
+        {
+          "period": "2026-03",
+          "observed": 53.46,
+          "modeled": 53.87,
+          "residual": -0.41
+        },
+        {
+          "period": "2026-04",
+          "observed": 55.71,
+          "modeled": 53.28,
+          "residual": 2.43
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.69,
+          "modeled": 52.49,
+          "residual": -1.8
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.68,
+          "modeled": 51.65,
+          "residual": 1.03
+        },
+        {
+          "period": "2026-07",
+          "observed": 48.2,
+          "modeled": 50.92,
+          "residual": -2.72
+        },
+        {
+          "period": "2026-08",
+          "observed": 50.06,
+          "modeled": 50.47,
+          "residual": -0.41
+        },
+        {
+          "period": "2026-09",
+          "observed": 48.2,
+          "modeled": 50.4,
+          "residual": -2.19
+        },
+        {
+          "period": "2026-10",
+          "observed": 48.81,
+          "modeled": 50.79,
+          "residual": -1.98
+        },
+        {
+          "period": "2026-11",
+          "observed": 51.71,
+          "modeled": 51.67,
+          "residual": 0.03
+        },
+        {
+          "period": "2026-12",
+          "observed": 49.67,
+          "modeled": 53.01,
+          "residual": -3.34
+        },
+        {
+          "period": "2026-01",
+          "observed": 51.97,
+          "modeled": 54.74,
+          "residual": -2.77
+        },
+        {
+          "period": "2026-02",
+          "observed": 58.19,
+          "modeled": 56.72,
+          "residual": 1.47
+        },
+        {
+          "period": "2026-03",
+          "observed": 59.02,
+          "modeled": 58.82,
+          "residual": 0.2
+        },
+        {
+          "period": "2026-04",
+          "observed": 59.73,
+          "modeled": 60.88,
+          "residual": -1.14
+        },
+        {
+          "period": "2026-05",
+          "observed": 65.95,
+          "modeled": 62.72,
+          "residual": 3.23
+        },
+        {
+          "period": "2026-06",
+          "observed": 67.58,
+          "modeled": 64.23,
+          "residual": 3.36
+        }
+      ],
+      "classification": {
+        "tp": 143,
+        "fp": 25,
+        "tn": 234,
+        "fn": 77,
+        "accuracy": 0.79,
+        "precision": 0.85,
+        "recall": 0.65
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "sports-analytics-prediction-app": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 34.44,
+          "modeled": 37.19,
+          "residual": -2.75
+        },
+        {
+          "period": "2026-02",
+          "observed": 36.47,
+          "modeled": 37.47,
+          "residual": -1.0
+        },
+        {
+          "period": "2026-03",
+          "observed": 37.39,
+          "modeled": 38.32,
+          "residual": -0.94
+        },
+        {
+          "period": "2026-04",
+          "observed": 39.78,
+          "modeled": 39.72,
+          "residual": 0.06
+        },
+        {
+          "period": "2026-05",
+          "observed": 39.15,
+          "modeled": 41.58,
+          "residual": -2.44
+        },
+        {
+          "period": "2026-06",
+          "observed": 42.08,
+          "modeled": 43.78,
+          "residual": -1.69
+        },
+        {
+          "period": "2026-07",
+          "observed": 44.67,
+          "modeled": 46.13,
+          "residual": -1.46
+        },
+        {
+          "period": "2026-08",
+          "observed": 47.92,
+          "modeled": 48.45,
+          "residual": -0.53
+        },
+        {
+          "period": "2026-09",
+          "observed": 52.79,
+          "modeled": 50.56,
+          "residual": 2.23
+        },
+        {
+          "period": "2026-10",
+          "observed": 52.25,
+          "modeled": 52.3,
+          "residual": -0.05
+        },
+        {
+          "period": "2026-11",
+          "observed": 55.47,
+          "modeled": 53.54,
+          "residual": 1.93
+        },
+        {
+          "period": "2026-12",
+          "observed": 54.76,
+          "modeled": 54.22,
+          "residual": 0.54
+        },
+        {
+          "period": "2026-01",
+          "observed": 55.05,
+          "modeled": 54.34,
+          "residual": 0.71
+        },
+        {
+          "period": "2026-02",
+          "observed": 54.9,
+          "modeled": 53.95,
+          "residual": 0.95
+        },
+        {
+          "period": "2026-03",
+          "observed": 55.4,
+          "modeled": 53.16,
+          "residual": 2.24
+        },
+        {
+          "period": "2026-04",
+          "observed": 52.79,
+          "modeled": 52.15,
+          "residual": 0.64
+        },
+        {
+          "period": "2026-05",
+          "observed": 48.51,
+          "modeled": 51.08,
+          "residual": -2.57
+        },
+        {
+          "period": "2026-06",
+          "observed": 48.17,
+          "modeled": 50.15,
+          "residual": -1.98
+        },
+        {
+          "period": "2026-07",
+          "observed": 46.54,
+          "modeled": 49.52,
+          "residual": -2.99
+        },
+        {
+          "period": "2026-08",
+          "observed": 49.26,
+          "modeled": 49.35,
+          "residual": -0.09
+        },
+        {
+          "period": "2026-09",
+          "observed": 49.26,
+          "modeled": 49.72,
+          "residual": -0.46
+        },
+        {
+          "period": "2026-10",
+          "observed": 50.29,
+          "modeled": 50.66,
+          "residual": -0.37
+        },
+        {
+          "period": "2026-11",
+          "observed": 52.14,
+          "modeled": 52.13,
+          "residual": 0.01
+        },
+        {
+          "period": "2026-12",
+          "observed": 54.16,
+          "modeled": 54.06,
+          "residual": 0.1
+        },
+        {
+          "period": "2026-01",
+          "observed": 57.84,
+          "modeled": 56.28,
+          "residual": 1.56
+        },
+        {
+          "period": "2026-02",
+          "observed": 60.12,
+          "modeled": 58.64,
+          "residual": 1.47
+        },
+        {
+          "period": "2026-03",
+          "observed": 60.64,
+          "modeled": 60.95,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-04",
+          "observed": 65.81,
+          "modeled": 63.01,
+          "residual": 2.8
+        },
+        {
+          "period": "2026-05",
+          "observed": 66.24,
+          "modeled": 64.68,
+          "residual": 1.56
+        },
+        {
+          "period": "2026-06",
+          "observed": 68.76,
+          "modeled": 65.84,
+          "residual": 2.92
+        }
+      ],
+      "classification": {
+        "tp": 206,
+        "fp": 20,
+        "tn": 250,
+        "fn": 35,
+        "accuracy": 0.89,
+        "precision": 0.91,
+        "recall": 0.85
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "climate-trend-analyzer": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 32.28,
+          "modeled": 36.09,
+          "residual": -3.81
+        },
+        {
+          "period": "2026-02",
+          "observed": 35.88,
+          "modeled": 36.98,
+          "residual": -1.1
+        },
+        {
+          "period": "2026-03",
+          "observed": 37.48,
+          "modeled": 38.51,
+          "residual": -1.02
+        },
+        {
+          "period": "2026-04",
+          "observed": 41.29,
+          "modeled": 40.56,
+          "residual": 0.73
+        },
+        {
+          "period": "2026-05",
+          "observed": 41.4,
+          "modeled": 42.99,
+          "residual": -1.59
+        },
+        {
+          "period": "2026-06",
+          "observed": 44.63,
+          "modeled": 45.6,
+          "residual": -0.97
+        },
+        {
+          "period": "2026-07",
+          "observed": 49.98,
+          "modeled": 48.17,
+          "residual": 1.81
+        },
+        {
+          "period": "2026-08",
+          "observed": 52.57,
+          "modeled": 50.51,
+          "residual": 2.06
+        },
+        {
+          "period": "2026-09",
+          "observed": 53.35,
+          "modeled": 52.42,
+          "residual": 0.94
+        },
+        {
+          "period": "2026-10",
+          "observed": 56.61,
+          "modeled": 53.76,
+          "residual": 2.85
+        },
+        {
+          "period": "2026-11",
+          "observed": 56.06,
+          "modeled": 54.46,
+          "residual": 1.6
+        },
+        {
+          "period": "2026-12",
+          "observed": 57.58,
+          "modeled": 54.51,
+          "residual": 3.07
+        },
+        {
+          "period": "2026-01",
+          "observed": 53.74,
+          "modeled": 53.99,
+          "residual": -0.25
+        },
+        {
+          "period": "2026-02",
+          "observed": 52.66,
+          "modeled": 53.02,
+          "residual": -0.36
+        },
+        {
+          "period": "2026-03",
+          "observed": 53.74,
+          "modeled": 51.78,
+          "residual": 1.96
+        },
+        {
+          "period": "2026-04",
+          "observed": 49.36,
+          "modeled": 50.48,
+          "residual": -1.12
+        },
+        {
+          "period": "2026-05",
+          "observed": 47.15,
+          "modeled": 49.34,
+          "residual": -2.19
+        },
+        {
+          "period": "2026-06",
+          "observed": 48.25,
+          "modeled": 48.55,
+          "residual": -0.3
+        },
+        {
+          "period": "2026-07",
+          "observed": 46.89,
+          "modeled": 48.28,
+          "residual": -1.39
+        },
+        {
+          "period": "2026-08",
+          "observed": 45.0,
+          "modeled": 48.62,
+          "residual": -3.62
+        },
+        {
+          "period": "2026-09",
+          "observed": 47.88,
+          "modeled": 49.61,
+          "residual": -1.74
+        },
+        {
+          "period": "2026-10",
+          "observed": 50.32,
+          "modeled": 51.22,
+          "residual": -0.91
+        },
+        {
+          "period": "2026-11",
+          "observed": 50.75,
+          "modeled": 53.34,
+          "residual": -2.59
+        },
+        {
+          "period": "2026-12",
+          "observed": 56.0,
+          "modeled": 55.81,
+          "residual": 0.19
+        },
+        {
+          "period": "2026-01",
+          "observed": 56.98,
+          "modeled": 58.43,
+          "residual": -1.45
+        },
+        {
+          "period": "2026-02",
+          "observed": 61.14,
+          "modeled": 60.99,
+          "residual": 0.16
+        },
+        {
+          "period": "2026-03",
+          "observed": 62.88,
+          "modeled": 63.27,
+          "residual": -0.39
+        },
+        {
+          "period": "2026-04",
+          "observed": 65.65,
+          "modeled": 65.1,
+          "residual": 0.55
+        },
+        {
+          "period": "2026-05",
+          "observed": 70.51,
+          "modeled": 66.34,
+          "residual": 4.16
+        },
+        {
+          "period": "2026-06",
+          "observed": 68.56,
+          "modeled": 66.95,
+          "residual": 1.62
+        }
+      ],
+      "classification": {
+        "tp": 212,
+        "fp": 61,
+        "tn": 250,
+        "fn": 39,
+        "accuracy": 0.82,
+        "precision": 0.78,
+        "recall": 0.84
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "financial-risk-portfolio-simulator": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 40.21,
+          "modeled": 39.16,
+          "residual": 1.05
+        },
+        {
+          "period": "2026-02",
+          "observed": 37.27,
+          "modeled": 40.27,
+          "residual": -2.99
+        },
+        {
+          "period": "2026-03",
+          "observed": 42.08,
+          "modeled": 41.64,
+          "residual": 0.44
+        },
+        {
+          "period": "2026-04",
+          "observed": 41.4,
+          "modeled": 43.2,
+          "residual": -1.8
+        },
+        {
+          "period": "2026-05",
+          "observed": 47.04,
+          "modeled": 44.85,
+          "residual": 2.19
+        },
+        {
+          "period": "2026-06",
+          "observed": 44.75,
+          "modeled": 46.48,
+          "residual": -1.74
+        },
+        {
+          "period": "2026-07",
+          "observed": 50.35,
+          "modeled": 47.99,
+          "residual": 2.35
+        },
+        {
+          "period": "2026-08",
+          "observed": 50.99,
+          "modeled": 49.29,
+          "residual": 1.7
+        },
+        {
+          "period": "2026-09",
+          "observed": 52.9,
+          "modeled": 50.31,
+          "residual": 2.59
+        },
+        {
+          "period": "2026-10",
+          "observed": 54.23,
+          "modeled": 51.0,
+          "residual": 3.23
+        },
+        {
+          "period": "2026-11",
+          "observed": 51.15,
+          "modeled": 51.38,
+          "residual": -0.22
+        },
+        {
+          "period": "2026-12",
+          "observed": 51.46,
+          "modeled": 51.46,
+          "residual": 0.0
+        },
+        {
+          "period": "2026-01",
+          "observed": 52.66,
+          "modeled": 51.32,
+          "residual": 1.34
+        },
+        {
+          "period": "2026-02",
+          "observed": 50.17,
+          "modeled": 51.05,
+          "residual": -0.87
+        },
+        {
+          "period": "2026-03",
+          "observed": 49.45,
+          "modeled": 50.74,
+          "residual": -1.29
+        },
+        {
+          "period": "2026-04",
+          "observed": 48.75,
+          "modeled": 50.51,
+          "residual": -1.76
+        },
+        {
+          "period": "2026-05",
+          "observed": 51.22,
+          "modeled": 50.47,
+          "residual": 0.75
+        },
+        {
+          "period": "2026-06",
+          "observed": 51.34,
+          "modeled": 50.67,
+          "residual": 0.66
+        },
+        {
+          "period": "2026-07",
+          "observed": 51.46,
+          "modeled": 51.19,
+          "residual": 0.27
+        },
+        {
+          "period": "2026-08",
+          "observed": 49.83,
+          "modeled": 52.03,
+          "residual": -2.2
+        },
+        {
+          "period": "2026-09",
+          "observed": 54.24,
+          "modeled": 53.18,
+          "residual": 1.05
+        },
+        {
+          "period": "2026-10",
+          "observed": 54.08,
+          "modeled": 54.59,
+          "residual": -0.51
+        },
+        {
+          "period": "2026-11",
+          "observed": 54.74,
+          "modeled": 56.17,
+          "residual": -1.42
+        },
+        {
+          "period": "2026-12",
+          "observed": 57.73,
+          "modeled": 57.82,
+          "residual": -0.09
+        },
+        {
+          "period": "2026-01",
+          "observed": 59.53,
+          "modeled": 59.44,
+          "residual": 0.08
+        },
+        {
+          "period": "2026-02",
+          "observed": 59.8,
+          "modeled": 60.93,
+          "residual": -1.13
+        },
+        {
+          "period": "2026-03",
+          "observed": 63.4,
+          "modeled": 62.19,
+          "residual": 1.21
+        },
+        {
+          "period": "2026-04",
+          "observed": 63.57,
+          "modeled": 63.16,
+          "residual": 0.41
+        },
+        {
+          "period": "2026-05",
+          "observed": 65.13,
+          "modeled": 63.8,
+          "residual": 1.33
+        },
+        {
+          "period": "2026-06",
+          "observed": 66.92,
+          "modeled": 64.13,
+          "residual": 2.79
+        }
+      ],
+      "classification": {
+        "tp": 141,
+        "fp": 44,
+        "tn": 238,
+        "fn": 73,
+        "accuracy": 0.76,
+        "precision": 0.76,
+        "recall": 0.66
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "crime-incident-mapping-dashboard": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 37.32,
+          "modeled": 38.99,
+          "residual": -1.67
+        },
+        {
+          "period": "2026-02",
+          "observed": 39.71,
+          "modeled": 40.55,
+          "residual": -0.84
+        },
+        {
+          "period": "2026-03",
+          "observed": 41.62,
+          "modeled": 42.35,
+          "residual": -0.73
+        },
+        {
+          "period": "2026-04",
+          "observed": 44.09,
+          "modeled": 44.26,
+          "residual": -0.17
+        },
+        {
+          "period": "2026-05",
+          "observed": 46.23,
+          "modeled": 46.14,
+          "residual": 0.09
+        },
+        {
+          "period": "2026-06",
+          "observed": 49.43,
+          "modeled": 47.88,
+          "residual": 1.55
+        },
+        {
+          "period": "2026-07",
+          "observed": 49.42,
+          "modeled": 49.35,
+          "residual": 0.07
+        },
+        {
+          "period": "2026-08",
+          "observed": 52.34,
+          "modeled": 50.47,
+          "residual": 1.87
+        },
+        {
+          "period": "2026-09",
+          "observed": 50.31,
+          "modeled": 51.18,
+          "residual": -0.87
+        },
+        {
+          "period": "2026-10",
+          "observed": 51.78,
+          "modeled": 51.49,
+          "residual": 0.28
+        },
+        {
+          "period": "2026-11",
+          "observed": 51.61,
+          "modeled": 51.44,
+          "residual": 0.17
+        },
+        {
+          "period": "2026-12",
+          "observed": 50.08,
+          "modeled": 51.11,
+          "residual": -1.04
+        },
+        {
+          "period": "2026-01",
+          "observed": 51.81,
+          "modeled": 50.62,
+          "residual": 1.19
+        },
+        {
+          "period": "2026-02",
+          "observed": 48.94,
+          "modeled": 50.08,
+          "residual": -1.15
+        },
+        {
+          "period": "2026-03",
+          "observed": 50.21,
+          "modeled": 49.65,
+          "residual": 0.57
+        },
+        {
+          "period": "2026-04",
+          "observed": 50.41,
+          "modeled": 49.43,
+          "residual": 0.98
+        },
+        {
+          "period": "2026-05",
+          "observed": 47.22,
+          "modeled": 49.54,
+          "residual": -2.31
+        },
+        {
+          "period": "2026-06",
+          "observed": 50.46,
+          "modeled": 50.03,
+          "residual": 0.43
+        },
+        {
+          "period": "2026-07",
+          "observed": 51.06,
+          "modeled": 50.93,
+          "residual": 0.13
+        },
+        {
+          "period": "2026-08",
+          "observed": 51.93,
+          "modeled": 52.21,
+          "residual": -0.28
+        },
+        {
+          "period": "2026-09",
+          "observed": 51.04,
+          "modeled": 53.81,
+          "residual": -2.78
+        },
+        {
+          "period": "2026-10",
+          "observed": 55.15,
+          "modeled": 55.64,
+          "residual": -0.49
+        },
+        {
+          "period": "2026-11",
+          "observed": 58.24,
+          "modeled": 57.55,
+          "residual": 0.69
+        },
+        {
+          "period": "2026-12",
+          "observed": 59.07,
+          "modeled": 59.42,
+          "residual": -0.35
+        },
+        {
+          "period": "2026-01",
+          "observed": 60.82,
+          "modeled": 61.13,
+          "residual": -0.31
+        },
+        {
+          "period": "2026-02",
+          "observed": 62.87,
+          "modeled": 62.55,
+          "residual": 0.32
+        },
+        {
+          "period": "2026-03",
+          "observed": 63.83,
+          "modeled": 63.61,
+          "residual": 0.22
+        },
+        {
+          "period": "2026-04",
+          "observed": 66.8,
+          "modeled": 64.26,
+          "residual": 2.54
+        },
+        {
+          "period": "2026-05",
+          "observed": 64.97,
+          "modeled": 64.51,
+          "residual": 0.45
+        },
+        {
+          "period": "2026-06",
+          "observed": 64.92,
+          "modeled": 64.42,
+          "residual": 0.51
+        }
+      ],
+      "classification": {
+        "tp": 137,
+        "fp": 33,
+        "tn": 153,
+        "fn": 77,
+        "accuracy": 0.72,
+        "precision": 0.81,
+        "recall": 0.64
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "customer-churn-prediction-app": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 38.63,
+          "modeled": 39.43,
+          "residual": -0.81
+        },
+        {
+          "period": "2026-02",
+          "observed": 42.38,
+          "modeled": 41.46,
+          "residual": 0.91
+        },
+        {
+          "period": "2026-03",
+          "observed": 45.74,
+          "modeled": 43.63,
+          "residual": 2.1
+        },
+        {
+          "period": "2026-04",
+          "observed": 45.43,
+          "modeled": 45.78,
+          "residual": -0.34
+        },
+        {
+          "period": "2026-05",
+          "observed": 49.93,
+          "modeled": 47.74,
+          "residual": 2.2
+        },
+        {
+          "period": "2026-06",
+          "observed": 51.63,
+          "modeled": 49.38,
+          "residual": 2.25
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.84,
+          "modeled": 50.59,
+          "residual": 2.24
+        },
+        {
+          "period": "2026-08",
+          "observed": 51.16,
+          "modeled": 51.33,
+          "residual": -0.17
+        },
+        {
+          "period": "2026-09",
+          "observed": 50.88,
+          "modeled": 51.58,
+          "residual": -0.7
+        },
+        {
+          "period": "2026-10",
+          "observed": 51.96,
+          "modeled": 51.4,
+          "residual": 0.56
+        },
+        {
+          "period": "2026-11",
+          "observed": 52.61,
+          "modeled": 50.88,
+          "residual": 1.73
+        },
+        {
+          "period": "2026-12",
+          "observed": 49.21,
+          "modeled": 50.16,
+          "residual": -0.95
+        },
+        {
+          "period": "2026-01",
+          "observed": 49.03,
+          "modeled": 49.4,
+          "residual": -0.37
+        },
+        {
+          "period": "2026-02",
+          "observed": 47.1,
+          "modeled": 48.75,
+          "residual": -1.65
+        },
+        {
+          "period": "2026-03",
+          "observed": 48.66,
+          "modeled": 48.37,
+          "residual": 0.29
+        },
+        {
+          "period": "2026-04",
+          "observed": 48.86,
+          "modeled": 48.37,
+          "residual": 0.48
+        },
+        {
+          "period": "2026-05",
+          "observed": 46.85,
+          "modeled": 48.84,
+          "residual": -1.99
+        },
+        {
+          "period": "2026-06",
+          "observed": 50.52,
+          "modeled": 49.8,
+          "residual": 0.72
+        },
+        {
+          "period": "2026-07",
+          "observed": 48.06,
+          "modeled": 51.21,
+          "residual": -3.15
+        },
+        {
+          "period": "2026-08",
+          "observed": 53.55,
+          "modeled": 53.01,
+          "residual": 0.54
+        },
+        {
+          "period": "2026-09",
+          "observed": 56.37,
+          "modeled": 55.07,
+          "residual": 1.29
+        },
+        {
+          "period": "2026-10",
+          "observed": 55.87,
+          "modeled": 57.25,
+          "residual": -1.38
+        },
+        {
+          "period": "2026-11",
+          "observed": 60.94,
+          "modeled": 59.38,
+          "residual": 1.56
+        },
+        {
+          "period": "2026-12",
+          "observed": 62.64,
+          "modeled": 61.3,
+          "residual": 1.34
+        },
+        {
+          "period": "2026-01",
+          "observed": 66.27,
+          "modeled": 62.88,
+          "residual": 3.39
+        },
+        {
+          "period": "2026-02",
+          "observed": 64.29,
+          "modeled": 64.02,
+          "residual": 0.27
+        },
+        {
+          "period": "2026-03",
+          "observed": 66.39,
+          "modeled": 64.68,
+          "residual": 1.71
+        },
+        {
+          "period": "2026-04",
+          "observed": 67.9,
+          "modeled": 64.87,
+          "residual": 3.03
+        },
+        {
+          "period": "2026-05",
+          "observed": 66.25,
+          "modeled": 64.63,
+          "residual": 1.63
+        },
+        {
+          "period": "2026-06",
+          "observed": 63.8,
+          "modeled": 64.07,
+          "residual": -0.27
+        }
+      ],
+      "classification": {
+        "tp": 219,
+        "fp": 36,
+        "tn": 256,
+        "fn": 30,
+        "accuracy": 0.88,
+        "precision": 0.86,
+        "recall": 0.88
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "statistical-test-recommender": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 38.64,
+          "modeled": 40.55,
+          "residual": -1.91
+        },
+        {
+          "period": "2026-02",
+          "observed": 43.78,
+          "modeled": 42.98,
+          "residual": 0.8
+        },
+        {
+          "period": "2026-03",
+          "observed": 45.33,
+          "modeled": 45.38,
+          "residual": -0.05
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.43,
+          "modeled": 47.56,
+          "residual": -0.13
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.91,
+          "modeled": 49.37,
+          "residual": 1.53
+        },
+        {
+          "period": "2026-06",
+          "observed": 52.45,
+          "modeled": 50.69,
+          "residual": 1.76
+        },
+        {
+          "period": "2026-07",
+          "observed": 53.16,
+          "modeled": 51.44,
+          "residual": 1.71
+        },
+        {
+          "period": "2026-08",
+          "observed": 53.07,
+          "modeled": 51.64,
+          "residual": 1.43
+        },
+        {
+          "period": "2026-09",
+          "observed": 51.54,
+          "modeled": 51.32,
+          "residual": 0.22
+        },
+        {
+          "period": "2026-10",
+          "observed": 50.28,
+          "modeled": 50.61,
+          "residual": -0.33
+        },
+        {
+          "period": "2026-11",
+          "observed": 50.68,
+          "modeled": 49.67,
+          "residual": 1.01
+        },
+        {
+          "period": "2026-12",
+          "observed": 47.47,
+          "modeled": 48.68,
+          "residual": -1.21
+        },
+        {
+          "period": "2026-01",
+          "observed": 47.6,
+          "modeled": 47.82,
+          "residual": -0.22
+        },
+        {
+          "period": "2026-02",
+          "observed": 47.1,
+          "modeled": 47.27,
+          "residual": -0.17
+        },
+        {
+          "period": "2026-03",
+          "observed": 47.07,
+          "modeled": 47.18,
+          "residual": -0.11
+        },
+        {
+          "period": "2026-04",
+          "observed": 47.75,
+          "modeled": 47.62,
+          "residual": 0.13
+        },
+        {
+          "period": "2026-05",
+          "observed": 45.75,
+          "modeled": 48.63,
+          "residual": -2.89
+        },
+        {
+          "period": "2026-06",
+          "observed": 47.6,
+          "modeled": 50.18,
+          "residual": -2.58
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.24,
+          "modeled": 52.18,
+          "residual": 0.06
+        },
+        {
+          "period": "2026-08",
+          "observed": 54.4,
+          "modeled": 54.48,
+          "residual": -0.09
+        },
+        {
+          "period": "2026-09",
+          "observed": 55.79,
+          "modeled": 56.92,
+          "residual": -1.13
+        },
+        {
+          "period": "2026-10",
+          "observed": 60.84,
+          "modeled": 59.3,
+          "residual": 1.55
+        },
+        {
+          "period": "2026-11",
+          "observed": 64.34,
+          "modeled": 61.43,
+          "residual": 2.91
+        },
+        {
+          "period": "2026-12",
+          "observed": 66.28,
+          "modeled": 63.18,
+          "residual": 3.1
+        },
+        {
+          "period": "2026-01",
+          "observed": 64.97,
+          "modeled": 64.41,
+          "residual": 0.55
+        },
+        {
+          "period": "2026-02",
+          "observed": 65.98,
+          "modeled": 65.08,
+          "residual": 0.9
+        },
+        {
+          "period": "2026-03",
+          "observed": 64.59,
+          "modeled": 65.19,
+          "residual": -0.6
+        },
+        {
+          "period": "2026-04",
+          "observed": 68.09,
+          "modeled": 64.81,
+          "residual": 3.28
+        },
+        {
+          "period": "2026-05",
+          "observed": 63.49,
+          "modeled": 64.06,
+          "residual": -0.56
+        },
+        {
+          "period": "2026-06",
+          "observed": 64.17,
+          "modeled": 63.09,
+          "residual": 1.07
+        }
+      ],
+      "classification": {
+        "tp": 211,
+        "fp": 42,
+        "tn": 257,
+        "fn": 43,
+        "accuracy": 0.85,
+        "precision": 0.83,
+        "recall": 0.83
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "bootstrap-confidence-interval-visualizer": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 43.18,
+          "modeled": 42.3,
+          "residual": 0.88
+        },
+        {
+          "period": "2026-02",
+          "observed": 46.98,
+          "modeled": 44.95,
+          "residual": 2.03
+        },
+        {
+          "period": "2026-03",
+          "observed": 48.82,
+          "modeled": 47.36,
+          "residual": 1.46
+        },
+        {
+          "period": "2026-04",
+          "observed": 51.2,
+          "modeled": 49.34,
+          "residual": 1.85
+        },
+        {
+          "period": "2026-05",
+          "observed": 52.33,
+          "modeled": 50.76,
+          "residual": 1.58
+        },
+        {
+          "period": "2026-06",
+          "observed": 55.78,
+          "modeled": 51.53,
+          "residual": 4.24
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.58,
+          "modeled": 51.66,
+          "residual": 0.92
+        },
+        {
+          "period": "2026-08",
+          "observed": 51.1,
+          "modeled": 51.22,
+          "residual": -0.12
+        },
+        {
+          "period": "2026-09",
+          "observed": 50.13,
+          "modeled": 50.32,
+          "residual": -0.19
+        },
+        {
+          "period": "2026-10",
+          "observed": 48.29,
+          "modeled": 49.16,
+          "residual": -0.86
+        },
+        {
+          "period": "2026-11",
+          "observed": 46.67,
+          "modeled": 47.93,
+          "residual": -1.26
+        },
+        {
+          "period": "2026-12",
+          "observed": 44.71,
+          "modeled": 46.86,
+          "residual": -2.15
+        },
+        {
+          "period": "2026-01",
+          "observed": 42.78,
+          "modeled": 46.15,
+          "residual": -3.37
+        },
+        {
+          "period": "2026-02",
+          "observed": 43.22,
+          "modeled": 45.95,
+          "residual": -2.74
+        },
+        {
+          "period": "2026-03",
+          "observed": 43.46,
+          "modeled": 46.37,
+          "residual": -2.91
+        },
+        {
+          "period": "2026-04",
+          "observed": 45.78,
+          "modeled": 47.44,
+          "residual": -1.66
+        },
+        {
+          "period": "2026-05",
+          "observed": 46.18,
+          "modeled": 49.12,
+          "residual": -2.94
+        },
+        {
+          "period": "2026-06",
+          "observed": 48.31,
+          "modeled": 51.32,
+          "residual": -3.0
+        },
+        {
+          "period": "2026-07",
+          "observed": 52.07,
+          "modeled": 53.86,
+          "residual": -1.79
+        },
+        {
+          "period": "2026-08",
+          "observed": 56.95,
+          "modeled": 56.56,
+          "residual": 0.4
+        },
+        {
+          "period": "2026-09",
+          "observed": 59.57,
+          "modeled": 59.19,
+          "residual": 0.38
+        },
+        {
+          "period": "2026-10",
+          "observed": 64.01,
+          "modeled": 61.54,
+          "residual": 2.47
+        },
+        {
+          "period": "2026-11",
+          "observed": 66.63,
+          "modeled": 63.45,
+          "residual": 3.19
+        },
+        {
+          "period": "2026-12",
+          "observed": 66.45,
+          "modeled": 64.77,
+          "residual": 1.68
+        },
+        {
+          "period": "2026-01",
+          "observed": 65.72,
+          "modeled": 65.45,
+          "residual": 0.28
+        },
+        {
+          "period": "2026-02",
+          "observed": 68.28,
+          "modeled": 65.48,
+          "residual": 2.8
+        },
+        {
+          "period": "2026-03",
+          "observed": 67.44,
+          "modeled": 64.96,
+          "residual": 2.48
+        },
+        {
+          "period": "2026-04",
+          "observed": 64.32,
+          "modeled": 64.01,
+          "residual": 0.3
+        },
+        {
+          "period": "2026-05",
+          "observed": 63.61,
+          "modeled": 62.82,
+          "residual": 0.78
+        },
+        {
+          "period": "2026-06",
+          "observed": 60.13,
+          "modeled": 61.61,
+          "residual": -1.48
+        }
+      ],
+      "classification": {
+        "tp": 168,
+        "fp": 67,
+        "tn": 257,
+        "fn": 21,
+        "accuracy": 0.83,
+        "precision": 0.71,
+        "recall": 0.89
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    },
+    "data-ethics-fairness-dashboard": {
+      "series": [
+        {
+          "period": "2026-01",
+          "observed": 45.28,
+          "modeled": 43.11,
+          "residual": 2.17
+        },
+        {
+          "period": "2026-02",
+          "observed": 46.2,
+          "modeled": 44.69,
+          "residual": 1.5
+        },
+        {
+          "period": "2026-03",
+          "observed": 48.14,
+          "modeled": 46.07,
+          "residual": 2.07
+        },
+        {
+          "period": "2026-04",
+          "observed": 49.96,
+          "modeled": 47.16,
+          "residual": 2.8
+        },
+        {
+          "period": "2026-05",
+          "observed": 47.9,
+          "modeled": 47.93,
+          "residual": -0.03
+        },
+        {
+          "period": "2026-06",
+          "observed": 49.9,
+          "modeled": 48.38,
+          "residual": 1.52
+        },
+        {
+          "period": "2026-07",
+          "observed": 51.03,
+          "modeled": 48.54,
+          "residual": 2.5
+        },
+        {
+          "period": "2026-08",
+          "observed": 50.54,
+          "modeled": 48.47,
+          "residual": 2.07
+        },
+        {
+          "period": "2026-09",
+          "observed": 48.69,
+          "modeled": 48.27,
+          "residual": 0.42
+        },
+        {
+          "period": "2026-10",
+          "observed": 46.34,
+          "modeled": 48.04,
+          "residual": -1.7
+        },
+        {
+          "period": "2026-11",
+          "observed": 46.93,
+          "modeled": 47.89,
+          "residual": -0.96
+        },
+        {
+          "period": "2026-12",
+          "observed": 49.27,
+          "modeled": 47.92,
+          "residual": 1.35
+        },
+        {
+          "period": "2026-01",
+          "observed": 45.47,
+          "modeled": 48.2,
+          "residual": -2.73
+        },
+        {
+          "period": "2026-02",
+          "observed": 46.95,
+          "modeled": 48.79,
+          "residual": -1.84
+        },
+        {
+          "period": "2026-03",
+          "observed": 50.71,
+          "modeled": 49.71,
+          "residual": 1.0
+        },
+        {
+          "period": "2026-04",
+          "observed": 49.89,
+          "modeled": 50.93,
+          "residual": -1.04
+        },
+        {
+          "period": "2026-05",
+          "observed": 50.57,
+          "modeled": 52.41,
+          "residual": -1.84
+        },
+        {
+          "period": "2026-06",
+          "observed": 53.02,
+          "modeled": 54.07,
+          "residual": -1.05
+        },
+        {
+          "period": "2026-07",
+          "observed": 57.7,
+          "modeled": 55.8,
+          "residual": 1.9
+        },
+        {
+          "period": "2026-08",
+          "observed": 57.21,
+          "modeled": 57.49,
+          "residual": -0.29
+        },
+        {
+          "period": "2026-09",
+          "observed": 59.46,
+          "modeled": 59.05,
+          "residual": 0.4
+        },
+        {
+          "period": "2026-10",
+          "observed": 61.88,
+          "modeled": 60.39,
+          "residual": 1.49
+        },
+        {
+          "period": "2026-11",
+          "observed": 63.81,
+          "modeled": 61.43,
+          "residual": 2.37
+        },
+        {
+          "period": "2026-12",
+          "observed": 63.14,
+          "modeled": 62.15,
+          "residual": 0.99
+        },
+        {
+          "period": "2026-01",
+          "observed": 61.61,
+          "modeled": 62.55,
+          "residual": -0.94
+        },
+        {
+          "period": "2026-02",
+          "observed": 63.67,
+          "modeled": 62.67,
+          "residual": 1.0
+        },
+        {
+          "period": "2026-03",
+          "observed": 60.92,
+          "modeled": 62.58,
+          "residual": -1.67
+        },
+        {
+          "period": "2026-04",
+          "observed": 60.63,
+          "modeled": 62.37,
+          "residual": -1.74
+        },
+        {
+          "period": "2026-05",
+          "observed": 60.49,
+          "modeled": 62.15,
+          "residual": -1.66
+        },
+        {
+          "period": "2026-06",
+          "observed": 62.26,
+          "modeled": 62.02,
+          "residual": 0.24
+        }
+      ],
+      "classification": {
+        "tp": 215,
+        "fp": 30,
+        "tn": 234,
+        "fn": 46,
+        "accuracy": 0.86,
+        "precision": 0.88,
+        "recall": 0.82
+      },
+      "notes": [
+        "Snapshot uses deterministic sample data for v1.",
+        "Replace this generator with an API-backed fetcher while preserving this JSON shape."
+      ]
+    }
+  }
+}
