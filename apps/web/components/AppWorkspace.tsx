@@ -6,7 +6,18 @@ import { Activity, BarChart3, BookOpenCheck, Database, RefreshCcw } from "lucide
 import { bayesPosterior, classificationMetrics, designEffect, normalConfidenceInterval, recommendTest } from "@stats-portfolio/stat-core";
 import { PortfolioApp } from "@/lib/apps";
 import { makeComparison, makeSeries } from "@/lib/demo-series";
-import { FunctionalBayesSimulator, FunctionalMonteCarloStudio, FunctionalRegressionLab } from "./FunctionalApps";
+import {
+  FunctionalABTestingLab,
+  FunctionalBayesSimulator,
+  FunctionalCategoricalExplorer,
+  FunctionalFinancialRisk,
+  FunctionalMLArena,
+  FunctionalMonteCarloStudio,
+  FunctionalRegressionLab,
+  FunctionalSamplingSimulator,
+  FunctionalTestRecommender,
+  FunctionalTimeSeriesHub
+} from "./FunctionalApps";
 import { MiniChart } from "./MiniChart";
 
 type AppMode =
@@ -63,6 +74,13 @@ export function AppWorkspace({ app }: { app: PortfolioApp }) {
   if (app.slug === "regression-diagnostics-lab") return <FunctionalRegressionLab app={app} />;
   if (app.slug === "bayesian-disease-testing-simulator") return <FunctionalBayesSimulator app={app} />;
   if (app.slug === "monte-carlo-simulation-studio") return <FunctionalMonteCarloStudio app={app} />;
+  if (app.slug === "election-polling-sampling-simulator") return <FunctionalSamplingSimulator app={app} />;
+  if (app.slug === "categorical-data-analysis-explorer") return <FunctionalCategoricalExplorer app={app} />;
+  if (app.slug === "time-series-forecasting-hub") return <FunctionalTimeSeriesHub app={app} />;
+  if (app.slug === "machine-learning-model-arena") return <FunctionalMLArena app={app} />;
+  if (app.slug === "ab-testing-decision-lab") return <FunctionalABTestingLab app={app} />;
+  if (app.slug === "financial-risk-portfolio-simulator") return <FunctionalFinancialRisk app={app} />;
+  if (app.slug === "statistical-test-recommender") return <FunctionalTestRecommender app={app} />;
 
   return <GenericAppWorkspace app={app} />;
 }
