@@ -9,12 +9,22 @@ import { makeComparison, makeSeries } from "@/lib/demo-series";
 import {
   FunctionalABTestingLab,
   FunctionalBayesSimulator,
+  FunctionalBootstrapCI,
   FunctionalCategoricalExplorer,
+  FunctionalChurnPrediction,
+  FunctionalClimateTrend,
+  FunctionalCrimeMapping,
+  FunctionalDeepLearningClassifier,
+  FunctionalFairnessDashboard,
   FunctionalFinancialRisk,
+  FunctionalHousingDashboard,
   FunctionalMLArena,
   FunctionalMonteCarloStudio,
+  FunctionalPublicHealthRisk,
   FunctionalRegressionLab,
   FunctionalSamplingSimulator,
+  FunctionalSportsAnalytics,
+  FunctionalSurveyWeighting,
   FunctionalTestRecommender,
   FunctionalTimeSeriesHub
 } from "./FunctionalApps";
@@ -81,6 +91,16 @@ export function AppWorkspace({ app }: { app: PortfolioApp }) {
   if (app.slug === "ab-testing-decision-lab") return <FunctionalABTestingLab app={app} />;
   if (app.slug === "financial-risk-portfolio-simulator") return <FunctionalFinancialRisk app={app} />;
   if (app.slug === "statistical-test-recommender") return <FunctionalTestRecommender app={app} />;
+  if (app.slug === "housing-price-modeling-dashboard") return <FunctionalHousingDashboard app={app} />;
+  if (app.slug === "public-health-risk-dashboard") return <FunctionalPublicHealthRisk app={app} />;
+  if (app.slug === "deep-learning-image-classifier-demo") return <FunctionalDeepLearningClassifier app={app} />;
+  if (app.slug === "survey-weighting-bias-dashboard") return <FunctionalSurveyWeighting app={app} />;
+  if (app.slug === "sports-analytics-prediction-app") return <FunctionalSportsAnalytics app={app} />;
+  if (app.slug === "climate-trend-analyzer") return <FunctionalClimateTrend app={app} />;
+  if (app.slug === "crime-incident-mapping-dashboard") return <FunctionalCrimeMapping app={app} />;
+  if (app.slug === "customer-churn-prediction-app") return <FunctionalChurnPrediction app={app} />;
+  if (app.slug === "bootstrap-confidence-interval-visualizer") return <FunctionalBootstrapCI app={app} />;
+  if (app.slug === "data-ethics-fairness-dashboard") return <FunctionalFairnessDashboard app={app} />;
 
   return <GenericAppWorkspace app={app} />;
 }

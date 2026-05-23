@@ -5,6 +5,8 @@ import type { CSSProperties, ReactNode } from "react";
 import {
   bayesTestSummary,
   bootstrapMeanInterval,
+  classificationMetrics,
+  effectiveSampleSize,
   linearRegression,
   mean,
   monteCarloMeans,
@@ -389,6 +391,272 @@ export function FunctionalTestRecommender({ app }: { app: PortfolioApp }) {
   );
 }
 
+export function FunctionalHousingDashboard({ app }: { app: PortfolioApp }) {
+  const [sqftEffect, setSqftEffect] = useState(68);
+  const [locationPremium, setLocationPremium] = useState(34);
+  const neighborhoods = [
+    { label: "Core", sqft: 820, beds: 1, transit: 0.95 },
+    { label: "West", sqft: 1120, beds: 2, transit: 0.72 },
+    { label: "North", sqft: 1380, beds: 3, transit: 0.56 },
+    { label: "East", sqft: 1040, beds: 2, transit: 0.64 },
+    { label: "Suburb", sqft: 1680, beds: 3, transit: 0.35 }
+  ];
+  const predictions = neighborhoods.map((home) => 118 + (home.sqft / 100) * sqftEffect + home.beds * 34 + home.transit * locationPremium * 10);
+  const actual = predictions.map((value, index) => value * (0.92 + ((index % 3) * 0.045)));
+  const mape = mean(actual.map((value, index) => Math.abs(value - predictions[index]) / value)) * 100;
+  const model = linearRegression(neighborhoods.map((home, index) => ({ x: home.sqft, y: actual[index] })));
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional hedonic model"
+      intro="Model housing price as a function of square footage, bedrooms, and location premium, then inspect prediction error and residual pattern."
+      controls={<><label>Sqft coefficient: {sqftEffect}<input type="range" min="35" max="115" value={sqftEffect} onChange={(e) => setSqftEffect(Number(e.target.value))} /></label><label>Location premium: {locationPremium}<input type="range" min="0" max="70" value={locationPremium} onChange={(e) => setLocationPremium(Number(e.target.value))} /></label></>}
+      metrics={[["MAPE", `${mape.toFixed(1)}%`], ["Sqft slope", model.slope.toFixed(3)], ["R2", model.rSquared.toFixed(3)], ["Mean price", `$${mean(actual).toFixed(0)}k`], ["Largest residual", `$${Math.max(...model.residuals.map(Math.abs)).toFixed(0)}k`], ["Model family", "Hedonic OLS"]]}
+      notes={["Hedonic regression decomposes price into interpretable features.", "Prediction error is reported separately from coefficient interpretation.", "Location premiums can act as confounders when omitted."]}
+    >
+      <GroupedBars rows={neighborhoods.map((home, index) => ({ label: home.label, first: actual[index] / 1800, second: predictions[index] / 1800 }))} firstLabel="Observed price" secondLabel="Modeled price" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalPublicHealthRisk({ app }: { app: PortfolioApp }) {
+  const [baseline, setBaseline] = useState(38);
+  const [exposure, setExposure] = useState(46);
+  const groups = [
+    { label: "18-34", pop: 62000, modifier: 0.72 },
+    { label: "35-49", pop: 54000, modifier: 0.94 },
+    { label: "50-64", pop: 47000, modifier: 1.22 },
+    { label: "65+", pop: 31000, modifier: 1.68 }
+  ];
+  const rows = groups.map((group) => {
+    const unexposedRate = (baseline * group.modifier) / 100000;
+    const exposedRate = unexposedRate * (1 + exposure / 100);
+    return { ...group, cases: group.pop * exposedRate, expected: group.pop * unexposedRate };
+  });
+  const rate = rows.reduce((sum, row) => sum + row.cases, 0) / rows.reduce((sum, row) => sum + row.pop, 0) * 100000;
+  const expectedRate = rows.reduce((sum, row) => sum + row.expected, 0) / rows.reduce((sum, row) => sum + row.pop, 0) * 100000;
+  const ratio = rate / expectedRate;
+  const seLog = Math.sqrt(1 / Math.max(rows.reduce((sum, row) => sum + row.cases, 0), 1) + 1 / Math.max(rows.reduce((sum, row) => sum + row.expected, 0), 1));
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional rate model"
+      intro="Convert subgroup counts to population rates, estimate risk ratios, and display uncertainty on the log-risk scale."
+      controls={<><label>Baseline rate: {baseline} per 100k<input type="range" min="5" max="95" value={baseline} onChange={(e) => setBaseline(Number(e.target.value))} /></label><label>Exposure lift: {exposure}%<input type="range" min="0" max="120" value={exposure} onChange={(e) => setExposure(Number(e.target.value))} /></label></>}
+      metrics={[["Risk ratio", ratio.toFixed(2)], ["Observed rate", `${rate.toFixed(1)}/100k`], ["Expected rate", `${expectedRate.toFixed(1)}/100k`], ["RR 95% CI", `${Math.exp(Math.log(ratio) - 1.96 * seLog).toFixed(2)} to ${Math.exp(Math.log(ratio) + 1.96 * seLog).toFixed(2)}`], ["Total cases", `${Math.round(rows.reduce((sum, row) => sum + row.cases, 0))}`], ["Basis", "Per 100k"]]}
+      notes={["Rates use denominators so large groups do not dominate raw counts.", "Risk-ratio intervals use a log scale for positive estimates.", "Subgroup comparisons flag effect modification."]}
+    >
+      <GroupedBars rows={rows.map((row) => ({ label: row.label, first: row.cases / row.pop * 1000, second: row.expected / row.pop * 1000 }))} firstLabel="Observed rate" secondLabel="Expected rate" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalDeepLearningClassifier({ app }: { app: PortfolioApp }) {
+  const [quality, setQuality] = useState(72);
+  const [shift, setShift] = useState(18);
+  const logits = [quality * 0.09 - shift * 0.02, 3.7 + shift * 0.025, 2.4, 1.7].map(Math.exp);
+  const total = logits.reduce((sum, value) => sum + value, 0);
+  const probs = logits.map((value) => value / total);
+  const top = Math.max(...probs);
+  const entropy = -probs.reduce((sum, p) => sum + p * Math.log2(Math.max(p, Number.EPSILON)), 0);
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional image classifier"
+      intro="Simulate transfer-learning outputs: top-k softmax probabilities, confidence under image quality, and a saliency-style attention region."
+      controls={<><label>Image quality: {quality}%<input type="range" min="25" max="99" value={quality} onChange={(e) => setQuality(Number(e.target.value))} /></label><label>Data drift: {shift}%<input type="range" min="0" max="70" value={shift} onChange={(e) => setShift(Number(e.target.value))} /></label></>}
+      metrics={[["Top class", "Class A"], ["Confidence", `${(top * 100).toFixed(1)}%`], ["Top-3 mass", `${((probs[0] + probs[1] + probs[2]) * 100).toFixed(1)}%`], ["Entropy", entropy.toFixed(2)], ["Drift warning", shift > 45 ? "High" : "Moderate"], ["Explanation", "Saliency region"]]}
+      notes={["Softmax confidence is not the same as correctness.", "Data drift shifts probability mass toward confusing classes.", "Saliency-style views are explanations to inspect, not proof of causality."]}
+    >
+      <div className="image-demo">
+        <div className="synthetic-image"><span style={{ left: `${22 + shift / 3}%`, top: `${18 + (100 - quality) / 4}%`, borderColor: app.accent }} /></div>
+        <GroupedBars rows={["Class A", "Class B", "Class C", "Other"].map((label, index) => ({ label, first: probs[index], second: 0 }))} firstLabel="Softmax probability" secondLabel="" color={app.accent} />
+      </div>
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalSurveyWeighting({ app }: { app: PortfolioApp }) {
+  const [imbalance, setImbalance] = useState(34);
+  const [weightCap, setWeightCap] = useState(3);
+  const groups = [
+    { label: "A", population: 0.36, sample: 0.36 - imbalance / 300, value: 0.42 },
+    { label: "B", population: 0.29, sample: 0.29 + imbalance / 500, value: 0.52 },
+    { label: "C", population: 0.22, sample: 0.22 + imbalance / 450, value: 0.61 },
+    { label: "D", population: 0.13, sample: 0.13 - imbalance / 700, value: 0.37 }
+  ];
+  const rawTotal = groups.reduce((sum, group) => sum + Math.max(group.sample, 0.02), 0);
+  const normalized = groups.map((group) => ({ ...group, sample: Math.max(group.sample, 0.02) / rawTotal }));
+  const rawWeights = normalized.map((group) => group.population / group.sample);
+  const cappedWeights = rawWeights.map((weight) => Math.min(weight, weightCap));
+  const weighted = normalized.reduce((sum, group, index) => sum + group.sample * cappedWeights[index] * group.value, 0) / normalized.reduce((sum, group, index) => sum + group.sample * cappedWeights[index], 0);
+  const unweighted = normalized.reduce((sum, group) => sum + group.sample * group.value, 0);
+  const target = normalized.reduce((sum, group) => sum + group.population * group.value, 0);
+  const ess = effectiveSampleSize(cappedWeights) / cappedWeights.length * 1000;
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional weighting dashboard"
+      intro="Post-stratify a biased sample toward population margins and watch bias correction trade off against effective sample size."
+      controls={<><label>Sample imbalance: {imbalance}%<input type="range" min="0" max="65" value={imbalance} onChange={(e) => setImbalance(Number(e.target.value))} /></label><label>Weight cap: {weightCap.toFixed(1)}x<input type="range" min="1" max="6" step="0.25" value={weightCap} onChange={(e) => setWeightCap(Number(e.target.value))} /></label></>}
+      metrics={[["Weighted estimate", `${(weighted * 100).toFixed(1)}%`], ["Unweighted", `${(unweighted * 100).toFixed(1)}%`], ["Population target", `${(target * 100).toFixed(1)}%`], ["Bias after weighting", `${((weighted - target) * 100).toFixed(1)} pts`], ["Effective n", `${Math.round(ess)}`], ["Max weight", `${Math.max(...cappedWeights).toFixed(2)}x`]]}
+      notes={["Post-stratification corrects known composition differences.", "Weight caps reduce variance at the cost of remaining bias.", "Effective sample size summarizes precision lost to unequal weights."]}
+    >
+      <GroupedBars rows={normalized.map((group) => ({ label: group.label, first: group.population, second: group.sample }))} firstLabel="Population" secondLabel="Sample" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalSportsAnalytics({ app }: { app: PortfolioApp }) {
+  const [ratingDiff, setRatingDiff] = useState(80);
+  const [homeAdvantage, setHomeAdvantage] = useState(55);
+  const logit = (ratingDiff + homeAdvantage) / 400;
+  const winProb = 1 / (1 + 10 ** (-logit));
+  const games = [0.28, 0.41, 0.52, 0.58, 0.64, 0.73, 0.81].map((p, index) => ({ label: `${Math.round(p * 100)}%`, first: p, second: Math.min(0.95, Math.max(0.05, p + Math.sin(index + ratingDiff / 80) * 0.07)) }));
+  const brier = mean(games.map((game) => (game.first - game.second) ** 2));
+  const logLoss = -mean(games.map((game) => game.second * Math.log(Math.max(game.first, 0.01)) + (1 - game.second) * Math.log(Math.max(1 - game.first, 0.01))));
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional Elo predictor"
+      intro="Convert rating differences and home advantage into logistic win probability, then evaluate calibration with historical bins."
+      controls={<><label>Rating difference: {ratingDiff}<input type="range" min="-240" max="240" value={ratingDiff} onChange={(e) => setRatingDiff(Number(e.target.value))} /></label><label>Home advantage: {homeAdvantage}<input type="range" min="0" max="110" value={homeAdvantage} onChange={(e) => setHomeAdvantage(Number(e.target.value))} /></label></>}
+      metrics={[["Win probability", `${(winProb * 100).toFixed(1)}%`], ["Brier score", brier.toFixed(3)], ["Log loss", logLoss.toFixed(3)], ["Rating edge", `${ratingDiff}`], ["Home edge", `${homeAdvantage}`], ["Calibration", brier < 0.01 ? "Strong" : "Check bins"]]}
+      notes={["Elo differences become probabilities through a logistic curve.", "Calibration compares predicted bins against observed win rates.", "Backtesting avoids evaluating a model only on current intuition."]}
+    >
+      <GroupedBars rows={games} firstLabel="Predicted" secondLabel="Observed" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalClimateTrend({ app }: { app: PortfolioApp }) {
+  const [trend, setTrend] = useState(18);
+  const [cycle, setCycle] = useState(12);
+  const anomalies = Array.from({ length: 30 }, (_, index) => -0.35 + index * (trend / 1000) + Math.sin(index / 2.8) * (cycle / 100));
+  const model = linearRegression(anomalies.map((y, index) => ({ x: index, y })));
+  const ci = normalConfidenceInterval(model.residuals);
+  const decadeTrend = model.slope * 10;
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional climate trend model"
+      intro="Analyze temperature anomalies with a trend regression, rolling variability, and residual uncertainty."
+      controls={<><label>Long-run trend: {trend / 100} C/year<input type="range" min="0" max="45" value={trend} onChange={(e) => setTrend(Number(e.target.value))} /></label><label>Weather variability: {cycle}<input type="range" min="0" max="30" value={cycle} onChange={(e) => setCycle(Number(e.target.value))} /></label></>}
+      metrics={[["Trend", `${decadeTrend.toFixed(2)} C/dec.`], ["R2", model.rSquared.toFixed(3)], ["Residual SD", standardDeviation(model.residuals).toFixed(3)], ["Residual CI", `${ci.lower.toFixed(2)} to ${ci.upper.toFixed(2)}`], ["Latest anomaly", `${anomalies.at(-1)?.toFixed(2)} C`], ["Model", "Trend + noise"]]}
+      notes={["Anomalies show departures from a baseline rather than raw temperature.", "Trend uncertainty is interpreted separately from short-run variability.", "A noisy year does not erase a long-run signal."]}
+    >
+      <LineBars values={anomalies.map((value) => value + 1)} splitAt={anomalies.length + 1} color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalCrimeMapping({ app }: { app: PortfolioApp }) {
+  const [nightShare, setNightShare] = useState(42);
+  const [populationScale, setPopulationScale] = useState(55);
+  const areas = [
+    { label: "N1", incidents: 94, pop: 18 },
+    { label: "N2", incidents: 62, pop: 24 },
+    { label: "N3", incidents: 51, pop: 31 },
+    { label: "N4", incidents: 78, pop: 21 },
+    { label: "N5", incidents: 36, pop: 27 },
+    { label: "N6", incidents: 69, pop: 16 }
+  ].map((area, index) => ({ ...area, incidents: area.incidents * (1 + (nightShare - 40) / 250 + index / 50), pop: area.pop * (populationScale / 55) }));
+  const rates = areas.map((area) => area.incidents / area.pop);
+  const cityRate = mean(rates);
+  const maxRate = Math.max(...rates);
+  const ratio = maxRate / Math.max(cityRate, Number.EPSILON);
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional incident-rate map"
+      intro="Normalize incident counts by population exposure and compare neighborhood rates instead of raw totals."
+      controls={<><label>Night incident share: {nightShare}%<input type="range" min="10" max="80" value={nightShare} onChange={(e) => setNightShare(Number(e.target.value))} /></label><label>Population scale: {populationScale}<input type="range" min="30" max="90" value={populationScale} onChange={(e) => setPopulationScale(Number(e.target.value))} /></label></>}
+      metrics={[["Rate ratio", ratio.toFixed(2)], ["City rate", cityRate.toFixed(2)], ["Max rate", maxRate.toFixed(2)], ["Incidents", `${Math.round(areas.reduce((sum, area) => sum + area.incidents, 0))}`], ["Neighborhoods", `${areas.length}`], ["Caution", "Reporting bias"]]}
+      notes={["Raw counts can be misleading when neighborhoods have different exposure.", "Rate ratios compare each area with the city baseline.", "Incident data reflects reporting practices as well as underlying events."]}
+    >
+      <div className="tile-map">{areas.map((area, index) => <span key={area.label} style={{ opacity: 0.38 + (rates[index] / maxRate) * 0.62, background: app.accent }}>{area.label}<strong>{rates[index].toFixed(1)}</strong></span>)}</div>
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalChurnPrediction({ app }: { app: PortfolioApp }) {
+  const [threshold, setThreshold] = useState(42);
+  const [retentionCost, setRetentionCost] = useState(28);
+  const riskBins = [0.08, 0.16, 0.24, 0.37, 0.49, 0.63, 0.78, 0.88];
+  const selected = riskBins.filter((risk) => risk * 100 >= threshold);
+  const captured = selected.reduce((sum, risk) => sum + risk * 100, 0);
+  const contacted = selected.length * 100;
+  const lift = selected.length ? mean(selected) / mean(riskBins) : 0;
+  const profit = captured * 120 - contacted * retentionCost;
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional churn model"
+      intro="Turn churn probabilities into an intervention policy and quantify lift, captured churn, and retention economics."
+      controls={<><label>Contact threshold: {threshold}%<input type="range" min="5" max="90" value={threshold} onChange={(e) => setThreshold(Number(e.target.value))} /></label><label>Retention cost: ${retentionCost}<input type="range" min="5" max="80" value={retentionCost} onChange={(e) => setRetentionCost(Number(e.target.value))} /></label></>}
+      metrics={[["Lift", `${lift.toFixed(2)}x`], ["Contacted", `${contacted}`], ["Expected saves", `${captured.toFixed(0)}`], ["Net value", `$${profit.toFixed(0)}`], ["Threshold", `${threshold}%`], ["Top driver", "Tenure drop"]]}
+      notes={["Classification thresholds should be tied to action costs.", "Lift measures concentration of churn risk in the contacted group.", "Feature effects support explanation but do not prove causation."]}
+    >
+      <GroupedBars rows={riskBins.map((risk, index) => ({ label: `B${index + 1}`, first: risk, second: risk * 100 >= threshold ? risk : 0 }))} firstLabel="Predicted churn" secondLabel="Contacted risk" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalBootstrapCI({ app }: { app: PortfolioApp }) {
+  const [replications, setReplications] = useState(1000);
+  const [skew, setSkew] = useState(25);
+  const sample = bootstrapSample.map((value, index) => value + (index > 8 ? skew : 0));
+  const bootstrap = useMemo(() => bootstrapMeanInterval(sample, replications, 77 + skew), [sample, replications, skew]);
+  const normalCi = normalConfidenceInterval(sample);
+  const width = bootstrap.upper - bootstrap.lower;
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional bootstrap visualizer"
+      intro="Resample the observed data to build a bootstrap distribution and compare percentile intervals with normal-theory intervals."
+      controls={<><label>Replications: {replications}<input type="range" min="200" max="4000" step="100" value={replications} onChange={(e) => setReplications(Number(e.target.value))} /></label><label>Tail skew: {skew}<input type="range" min="0" max="80" value={skew} onChange={(e) => setSkew(Number(e.target.value))} /></label></>}
+      metrics={[["Bootstrap mean", bootstrap.estimate.toFixed(2)], ["Percentile CI", `${bootstrap.lower.toFixed(2)} to ${bootstrap.upper.toFixed(2)}`], ["Normal CI", `${normalCi.lower.toFixed(2)} to ${normalCi.upper.toFixed(2)}`], ["CI width", width.toFixed(2)], ["Replications", `${replications}`], ["Statistic", "Mean"]]}
+      notes={["Bootstrap intervals come from resampling the observed sample.", "Skewed data can make percentile and normal intervals differ.", "The histogram makes uncertainty visible as a distribution."]}
+    >
+      <Histogram bars={makeHistogram(bootstrap.estimates, 18)} title="Bootstrap distribution of the mean" />
+    </FunctionalShell>
+  );
+}
+
+export function FunctionalFairnessDashboard({ app }: { app: PortfolioApp }) {
+  const [thresholdA, setThresholdA] = useState(50);
+  const [thresholdB, setThresholdB] = useState(60);
+  const groupA = fairnessCounts(thresholdA, 240, 260, 0.78);
+  const groupB = fairnessCounts(thresholdB, 190, 310, 0.68);
+  const metricsA = classificationMetrics(groupA);
+  const metricsB = classificationMetrics(groupB);
+  const selectA = (groupA.tp + groupA.fp) / (groupA.tp + groupA.fp + groupA.tn + groupA.fn);
+  const selectB = (groupB.tp + groupB.fp) / (groupB.tp + groupB.fp + groupB.tn + groupB.fn);
+  const di = selectB / Math.max(selectA, Number.EPSILON);
+
+  return (
+    <FunctionalShell
+      app={app}
+      badge="functional fairness audit"
+      intro="Compare subgroup selection rates, false-positive rates, recall, calibration pressure, and disparate-impact ratio across thresholds."
+      controls={<><label>Group A threshold: {thresholdA}%<input type="range" min="10" max="90" value={thresholdA} onChange={(e) => setThresholdA(Number(e.target.value))} /></label><label>Group B threshold: {thresholdB}%<input type="range" min="10" max="90" value={thresholdB} onChange={(e) => setThresholdB(Number(e.target.value))} /></label></>}
+      metrics={[["DI ratio", di.toFixed(2)], ["A FPR", `${(metricsA.falsePositiveRate * 100).toFixed(1)}%`], ["B FPR", `${(metricsB.falsePositiveRate * 100).toFixed(1)}%`], ["Recall gap", `${Math.abs(metricsA.recall - metricsB.recall).toFixed(2)}`], ["A selected", `${(selectA * 100).toFixed(1)}%`], ["B selected", `${(selectB * 100).toFixed(1)}%`]]}
+      notes={["Fairness metrics can conflict, so no single score tells the whole story.", "Threshold mitigation changes selection rates and error rates together.", "Subgroup metrics should be reported with sample sizes and context."]}
+    >
+      <GroupedBars rows={[{ label: "FPR", first: metricsA.falsePositiveRate, second: metricsB.falsePositiveRate }, { label: "Recall", first: metricsA.recall, second: metricsB.recall }, { label: "Selected", first: selectA, second: selectB }, { label: "Precision", first: metricsA.precision, second: metricsB.precision }]} firstLabel="Group A" secondLabel="Group B" color={app.accent} />
+    </FunctionalShell>
+  );
+}
+
 function FunctionalShell({
   app,
   badge,
@@ -529,6 +797,17 @@ function makeTestDots(tp: number, fp: number, fn: number, tn: number) {
     ...Array.from({ length: counts.fn }, () => "fn"),
     ...Array.from({ length: tnCount }, () => "tn")
   ];
+}
+
+function fairnessCounts(threshold: number, positives: number, negatives: number, signal: number) {
+  const sensitivity = Math.max(0.22, Math.min(0.96, signal + (55 - threshold) / 140));
+  const falsePositiveRate = Math.max(0.03, Math.min(0.78, (100 - threshold) / 115 - signal / 7));
+  return {
+    tp: Math.round(positives * sensitivity),
+    fn: Math.round(positives * (1 - sensitivity)),
+    fp: Math.round(negatives * falsePositiveRate),
+    tn: Math.round(negatives * (1 - falsePositiveRate))
+  };
 }
 
 function finite(value: number) {
